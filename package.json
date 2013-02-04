@@ -1,0 +1,37 @@
+{
+  "name": "text2datauri",
+  "description": "A grunt plugin to convert a _text_ _file_ to a file containing a data URI with base64 or simple URI encoding.",
+  "version": "0.0.1",
+  "homepage": "https://github.com/mobilemind/text2datauri",
+  "author": {
+    "name": "Tom King",
+    "email": "mobilemind@pobox.com",
+    "url": "http://mobilemind.net/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mobilemind/text2datauri.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mobilemind/text2datauri/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/mobilemind/text2datauri/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "grunt.js",
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": ">=0.3.16"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
