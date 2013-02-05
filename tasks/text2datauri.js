@@ -81,22 +81,47 @@ module.exports = function(grunt) {
 
   // encoding in base64 or encodeURIComponent()
   grunt.registerHelper('text2data', function(rawString, encodingType) {
+    if (undefined === rawString) return '';
     if ('uri' === encodingType) return encodeURIComponent(rawString);
-    else return new Buffer(rawString).toString('base64');
+    else return new Buffer(rawString).toString('base64');   
   });
 
   // string replacements driven by config options
   grunt.registerHelper('text2dataPrefix', function(uriOpts) {
-    if (undefined === uriOpts.protocol) uriOpts.protocol = '';
-    if (undefined === uriOpts.mimeType) uriOpts.mimeType = '';
-    var prefix =  uriOpts.protocol + uriOpts.mimeType;
-    if ('' !== uriOpts.mimeType) prefix += ';';
-    if ('' !== uriOpts.targetCharset)  {
-          uriOpts.targetCharset = 'utf-8';
-          prefix += 'charset=' + uriOpts.targetCharset;
+    var protocol = (undefined !== uriOpts.protocol ? uriOpts.protocol : '');
+    var mimeType = (undefined !== uriOpts.mimeType ? uriOpts.mimeType : '');
+    var prefix = protocol + mimeType;
+    var targetCharset = (undefined !== uriOpts.targetCharset ? uriOpts.targetCharset : 'utf-8');
+    if ('' !== targetCharset)  {
+      prefix += ('' === mimeType ? '' : ';');
+      prefix += 'charset=utf-8';
     }
-    if ('uri' !== uriOpts.encoding) prefix += ';base64';
-	return prefix + ',';
+    var encoding = (undefined !== uriOpts.encoding ? uriOpts.encoding : 'base64');
+    if ('base64' === encoding) {
+      prefix += ('' === mimeType + targetCharset ? '' : ';');
+      prefix += encoding + ',';
+    }
+    if ('' !== mimeType + targetCharset && 'uri' === encoding) prefix += ',';
+    return prefix;
   });
 
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
