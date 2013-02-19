@@ -1,5 +1,6 @@
+'use strict';
 var grunt = require('grunt');
-
+var text2datauriHelpers = require('../tasks/text2datauriHelpers.js');
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -32,7 +33,7 @@ exports['text2datauri'] = {
 	var encoding = '';
 	var testVal = '';
 	var expectedVal = '';
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (null encoding value) should return "' + expectedVal + '"');
 
@@ -40,7 +41,7 @@ exports['text2datauri'] = {
 	encoding = '';
 	testVal = ';/?:@&=+," "[]\'\\%<>|';
 	expectedVal = 'Oy8/OkAmPSssIiAiW10nXCU8Pnw=';
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (null encoding value) should return "' + expectedVal + '"');
 
@@ -48,7 +49,7 @@ exports['text2datauri'] = {
     encoding = 'base64';
     testVal = '';
 	expectedVal = '';
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (base64 encoding) should return "' + expectedVal + '"');
 
@@ -56,7 +57,7 @@ exports['text2datauri'] = {
     encoding = 'base64';
 	testVal = ';/?:@&=+," "[]\'\\%<>|';
 	expectedVal = 'Oy8/OkAmPSssIiAiW10nXCU8Pnw=';
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (base64 encoding) should return "' + expectedVal + '"');
 
@@ -64,7 +65,7 @@ exports['text2datauri'] = {
     encoding = 'uri';
 	testVal = '';
 	expectedVal = '';
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (uri encoding) should return "' + expectedVal + '"');
 
@@ -72,7 +73,7 @@ exports['text2datauri'] = {
     encoding = 'uri';
 	testVal = ';/?:@&=+," "[]\'\\%<>|';
 	expectedVal = "%3B%2F%3F%3A%40%26%3D%2B%2C%22%20%22%5B%5D'%5C%25%3C%3E%7C";
-    test.deepEqual(grunt.helper('text2data', testVal, encoding),
+    test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
       expectedVal,
       'text2data "' + testVal + '" (uri encoding) should return "' + expectedVal + '"');
 
