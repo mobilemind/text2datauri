@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
-    pkg: '<json:package.json>',
+    pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: ['grunt.js', 'tasks/**/*.js', 'test/**/*.js'],
       options: {
