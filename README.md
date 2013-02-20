@@ -10,7 +10,7 @@ protocol schemes.
 For converting a `.js` file to a `javascript:` URI, please see the [js2uri] grunt plugin.
 
 ## Examples
-A file containing:
+An HTML file containing:
 ```html
 <!DOCTYPE HTML>
 <html lang=en><head><title>sample</title><body>content</body><html>
@@ -21,7 +21,7 @@ might become
 data:text/html;charset=utf-8;base64,PCFET0NUWVBFIEhUTUw+CjxodG1sIGxhbmc9ZW4+PGhlYWQ+PHRpdGxlPnNhbXBsZTwvdGl0bGU+PGJvZHk+Y29udGVudDwvYm9keT48aHRtbD4=
 ```
 
-A file containing:
+A CSV file containing:
 ```csv
 "Crosby, Stills, Nash & Young", "Déjà Vu"
 ```
@@ -41,14 +41,12 @@ with: `npm install text2datauri`
 Add the following to the `grunt.initConfig` section of your project's `Gruntfile.js` file:
 ```javascript
 text2datauri:  {
-  dist: {
-	src: 'dist/filename.html',
-	dest: 'dist/filename.uri'
-  }
+  'dist/outputFilename.uri': 'dist/lintedAndMinifiedFile.js'
 }
 ```
-Edit the  values for the `src:` (source) and `dest:` (destination) as appropriate. See 
-[Documenation](#documentation) below for details on `text2datauri` options.
+Edit the  values for the `dist/output...` (destination file) and the `dist/lintedAndMinifiedFile.js`
+source) as appropriate. See [Documenation](#documentation) below for details on
+additional `text2datauri` options.
 
 Below the `grunt.initConfig` section, load `text2datauri` as an external task before using it.
 
@@ -116,8 +114,7 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 ## Release History
 0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY FUNCTIONAL
 
-0.0.2 February 19, 2013 - fully functional / 'beta', w/grunt 0.4.0, Gruntfile.js
-
+0.0.2 February 20, 2013 - fully functional / 'beta', w/grunt 0.4.0, Gruntfile.js
 
 ## License
 Copyright (c) 2012, 2013 Tom King.
