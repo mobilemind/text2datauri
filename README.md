@@ -116,6 +116,8 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 0.0.2 February 20, 2013 - fully functional / 'beta', w/grunt 0.4.0, Gruntfile.js
 
+0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json updates
+
 ## License
 Copyright (c) 2012, 2013 Tom King.
 Licensed under the MIT license.

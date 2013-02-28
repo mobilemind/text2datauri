@@ -5,7 +5,7 @@
  * Copyright (c) 2012 Tom King
  * Licensed under the MIT license.
  */
-'use strict';
+"use strict";
 module.exports = function(grunt) {
   // HELPERS & PRIVATE VARS
   var text2datauriHelpers = require('./text2datauriHelpers.js');
@@ -18,9 +18,8 @@ module.exports = function(grunt) {
   // TASKS
   // ==========================================================================
 
-  // global var
-  var text2datauri_pkgVersion = '';
   // default version to  metadata version OR pkg.version if available
+  var text2datauri_pkgVersion = '';
   if (undefined !== grunt.config('meta.version')) text2datauri_pkgVersion = grunt.config('meta.version');
   else if (undefined !== grunt.config('pkg.version')) text2datauri_pkgVersion = grunt.config('pkg.version');
 

@@ -1,5 +1,4 @@
-'use strict';
-var grunt = require('grunt');
+"use strict";
 var text2datauriHelpers = require('../tasks/text2datauriHelpers.js');
 /*
   ======== A Handy Little Nodeunit Reference ========

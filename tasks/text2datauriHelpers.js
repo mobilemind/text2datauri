@@ -1,15 +1,16 @@
 // ==========================================================================
 // HELPERS
 // ==========================================================================
+"use strict";
 (function(exports) {
   // encoding in base64 or encodeURIComponent()
   exports.text2data = function(rawString, encodingType) {
     if (undefined === rawString) return '';
     if ('uri' === encodingType) return encodeURIComponent(rawString);
-    else return new Buffer(rawString).toString('base64');   
+    else return new Buffer(rawString).toString('base64');
   };
 
-  
+
   // string prefix driven by config options
   exports.text2dataPrefix = function(uriOpts) {
     var protocol = (undefined !== uriOpts.protocol ? uriOpts.protocol : '');

@@ -1,5 +1,4 @@
-'use strict';
-var grunt = require('grunt');
+"use strict";
 var text2datauriHelpers = require('../tasks/text2datauriHelpers.js');
 /*
   ======== A Handy Little Nodeunit Reference ========
@@ -32,7 +31,7 @@ exports['text2datauri'] = {
 	function optsToString(opts){
       return 'protocol:' + opts.protocol + ', mimeType: ' + opts.mimeType + ', targetCharset: ' + opts.targetCharset + ', encoding: ' + opts.encoding;
     }
-	
+
 	// test opts undefined
 	var optsUndefined =  { };
 	var expectedVal = 'charset=utf-8;base64,';
