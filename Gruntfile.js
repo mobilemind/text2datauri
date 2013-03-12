@@ -1,10 +1,11 @@
+'use strict';
 module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
-      files: ['grunt.js', 'tasks/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'tasks/**/*.js', 'test/**/*.js'],
       options: {
         strict: true,
         immed: true,

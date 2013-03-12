@@ -118,6 +118,9 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json updates
 
+0.0.4 March 12, 2013 - Update package.json for node 0.10.0 (ie node>=0.8.0),
+'use strict' added to Gruntfile.js
+
 ## License
 Copyright (c) 2012, 2013 Tom King.
 Licensed under the MIT license.
