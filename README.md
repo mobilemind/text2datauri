@@ -118,8 +118,11 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json updates
 
-0.0.4 March 12, 2013 - Update package.json for node 0.10.0 (ie node>=0.8.0),
-'use strict' added to Gruntfile.js
+0.0.4 March 12, 2013 - Update package.json for node 0.10.0 (ie `node>=0.10.0`),
+`'use strict';` added to Gruntfile.js
+
+0.0.5 May 18, 2013 - Update package.json for `node>=0.10.7` and `jshint >= 0.5.2`,
+Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 
 ## License
 Copyright (c) 2012, 2013 Tom King.
