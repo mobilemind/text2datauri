@@ -124,6 +124,8 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 0.0.5 May 18, 2013 - Update package.json for `node>=0.10.7` and `jshint >= 0.5.2`,
 Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 
+0.0.6: May 20, 2013 - update license URL in `package.json`, bump version
+
 ## License
 Copyright (c) 2012, 2013 Tom King.
 Licensed under the MIT license.
