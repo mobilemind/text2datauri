@@ -18,7 +18,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/mobilemind/text2datauri/blob/master/LICENSE-MIT"
+      "url": "https://github.com/mobilemind/text2datauri/raw/master/LICENSE-MIT"
     }
   ],
   "main": "Gruntfile.js",
