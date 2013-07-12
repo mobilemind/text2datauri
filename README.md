@@ -112,19 +112,21 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
-0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY FUNCTIONAL
+0.0.7: July 12, 2013 - update dependancies in `package.json`, bump version
 
-0.0.2 February 20, 2013 - fully functional / 'beta', w/grunt 0.4.0, Gruntfile.js
+0.0.6: May 20, 2013 - update license URL in `package.json`, bump version
 
-0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json updates
+0.0.5 May 18, 2013 - Update `package.json` for `node>=0.10.7` and `jshint >= 0.5.2`,
+Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 
 0.0.4 March 12, 2013 - Update package.json for node 0.10.0 (ie `node>=0.10.0`),
 `'use strict';` added to Gruntfile.js
 
-0.0.5 May 18, 2013 - Update package.json for `node>=0.10.7` and `jshint >= 0.5.2`,
-Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
+0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json updates
 
-0.0.6: May 20, 2013 - update license URL in `package.json`, bump version
+0.0.2 February 20, 2013 - fully functional / 'beta', w/grunt 0.4.0, Gruntfile.js
+
+0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY FUNCTIONAL
 
 ## License
 Copyright (c) 2012, 2013 Tom King.
