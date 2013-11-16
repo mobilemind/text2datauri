@@ -112,6 +112,10 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.10: November 15, 2013 - bump version and remember to update doc
+
+0.0.9: November 15, 2013 - update dependancies in `package.json`, bump version (forget to update doc)
+
 0.0.8: July 28, 2013 - update dependancies in `package.json`, bump version
 
 0.0.7: July 12, 2013 - update dependancies in `package.json`, bump version
