@@ -1,5 +1,7 @@
 # text2datauri
 
+[![Build Status](https://secure.travis-ci.org/mobilemind/text2datauri.png?branch=master)](http://travis-ci.org/mobilemind/text2datauri)
+
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
 bookmark URI encoded in _base64_. Or use it to convert a CSV file to a
@@ -112,6 +114,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.11: December 9, 2013 - update to `grunt-contrib-jshint` 0.7.x and integrate Travis CI
+
 0.0.10: November 15, 2013 - bump version and remember to update doc
 
 0.0.9: November 15, 2013 - update dependancies in `package.json`, bump version (forget to update doc)
