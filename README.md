@@ -143,7 +143,7 @@ Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY FUNCTIONAL
 
 ## License
-Copyright (c) 2012, 2013 Tom King.
+Copyright (c) 2012, 2013, 2014 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
