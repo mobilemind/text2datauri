@@ -114,6 +114,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.14: April 21, 2014 - update to `grunt-contrib-jshint` 0.10.x
+
 0.0.13: March 26, 2014 - update to `grunt-contrib-jshint` 0.9.x; `grunt-contrib-nodeunit` to 0.3.x
 
 0.0.12: December 27, 2013 - update to `grunt-contrib-jshint` 0.8.x and streamline dependencies
