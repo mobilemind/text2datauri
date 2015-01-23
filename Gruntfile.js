@@ -8,7 +8,9 @@ module.exports = function(grunt) {
       files: ['Gruntfile.js', 'tasks/text2datauri*.js', 'test/text2datauri*.js'],
       options: {
         strict: true,
+        bitwise: true,
         immed: true,
+        freeze: true,
         latedef: true,
         noarg: true,
         sub: true,
