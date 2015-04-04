@@ -114,6 +114,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.18: update devDependencies and copyright info
+
 0.0.17: work with `node` engine 0.10.x - 0.12.x
 
 0.0.16: January 22, 2015 -update to `grunt-contrib-jshint` 0.11.x; add some stricter checks
@@ -151,7 +153,7 @@ Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY FUNCTIONAL
 
 ## License
-Copyright (c) 2012, 2013, 2014 Tom King.
+Copyright (c) 2012-2015 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
