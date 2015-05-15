@@ -114,6 +114,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.19: update license info in `package.json` to use new property and SPDX format
+
 0.0.18: update devDependencies and copyright info
 
 0.0.17: work with `node` engine 0.10.x - 0.12.x
