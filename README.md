@@ -1,6 +1,6 @@
 # text2datauri [![NPM version](https://badge.fury.io/js/text2datauri.svg)](http://badge.fury.io/js/text2datauri)
 
-[![Build Status](https://secure.travis-ci.org/mobilemind/text2datauri.png?branch=master)](http://travis-ci.org/mobilemind/text2datauri)
+[![Build Status](https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master)](http://travis-ci.org/mobilemind/text2datauri)
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
