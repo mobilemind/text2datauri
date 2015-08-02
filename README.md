@@ -1,6 +1,11 @@
-# text2datauri [![NPM version](https://badge.fury.io/js/text2datauri.svg)](http://badge.fury.io/js/text2datauri)
+# text2datauri
 
-[![Build Status](https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master)](http://travis-ci.org/mobilemind/text2datauri)
+[![Build Status][build-image]][build-url]
+
+[![NPM version][npm-image]][npm-url]
+
+[![Dependency Status][dep-image]][dep-url]
+[![devDependency Status][devDep-image]][devDep-url]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
@@ -159,6 +164,15 @@ Copyright (c) 2012-2015 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
+[build-image]: https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master
+[build-url]: http://travis-ci.org/mobilemind/text2datauri
+[npm-image]: https://img.shields.io/npm/v/text2datauri.svg
+[npm-url]: https://www.npmjs.com/package/text2datauri
+[dep-image]: https://david-dm.org/mobilemind/text2datauri.svg
+[dep-url]: https://david-dm.org/mobilemind/text2datauri
+[devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
+[devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
+
 [grunt]: http://gruntjs.com/
 [getting_started]: https://github.com/gruntjs/grunt/wiki/Getting-started
 [js2uri]: http://npmjs.org/package/js2uri
