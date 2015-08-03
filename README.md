@@ -1,20 +1,16 @@
-# text2datauri
+# text2datauri [![NPM version][npm-image]][npm-url]
 
 [![Build Status][build-image]][build-url]
-
-[![NPM version][npm-image]][npm-url]
-
-[![Dependency Status][dep-image]][dep-url]
-[![devDependency Status][devDep-image]][devDep-url]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
 bookmark URI encoded in _base64_. Or use it to convert a CSV file to a
 `data:text/csv;charset=utf-8,...` URI using basic `encodeURIComponent()` encoding. It may
 also be useful for creating URLs to communicate between web apps and iOS apps using URI
-protocol schemes.
+protocol schemes. For converting a `.js` file to a `javascript:` URI, please see the [js2uri] grunt plugin.
 
-For converting a `.js` file to a `javascript:` URI, please see the [js2uri] grunt plugin.
+[![Dependency Status][dep-image]][dep-url]
+[![devDependency Status][devDep-image]][devDep-url]
 
 ## Examples
 An HTML file containing:
