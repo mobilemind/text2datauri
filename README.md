@@ -1,6 +1,6 @@
-# text2datauri [![NPM version][npm-image]][npm-url]
+# text2datauri
 
-[![Build Status][build-image]][build-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
@@ -9,8 +9,7 @@ bookmark URI encoded in _base64_. Or use it to convert a CSV file to a
 also be useful for creating URLs to communicate between web apps and iOS apps using URI
 protocol schemes. For converting a `.js` file to a `javascript:` URI, please see the [js2uri] grunt plugin.
 
-[![Dependency Status][dep-image]][dep-url]
-[![devDependency Status][devDep-image]][devDep-url]
+[![Dependency Status][dep-image]][dep-url] [![devDependency Status][devDep-image]][devDep-url]
 
 ## Examples
 An HTML file containing:
@@ -36,7 +35,7 @@ data:text/csv;charset=utf-8,%22Crosby%2C%20Stills%2C%20Nash%20%26%20Young%22%2C%
 
 ## Getting Started
 ### Install
-Install this grunt plugin next to your project's [Gruntfile.js gruntfile][getting_started]
+Install this grunt plugin next to your project's [Gruntfile.js gruntfile][getting-started]
 with: `npm install text2datauri`
 
 ### Edit Gruntfile.js
@@ -115,6 +114,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.21: NO FUNCTIONAL CHANGE. version again so npmjs.com will accept new docs (Markdown parser issues with npmjs.com v. github.com)
+
 0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept new docs
 
 0.0.19: update license info in `package.json` to use new property and SPDX format
@@ -163,14 +164,23 @@ Licensed under the MIT license.
 
 <!-- reference URLs -->
 [build-image]: https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master
+
 [build-url]: http://travis-ci.org/mobilemind/text2datauri
+
 [npm-image]: https://img.shields.io/npm/v/text2datauri.svg
+
 [npm-url]: https://www.npmjs.com/package/text2datauri
+
 [dep-image]: https://david-dm.org/mobilemind/text2datauri.svg
+
 [dep-url]: https://david-dm.org/mobilemind/text2datauri
+
 [devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
+
 [devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
 
 [grunt]: http://gruntjs.com/
-[getting_started]: https://github.com/gruntjs/grunt/wiki/Getting-started
+
+[getting-started]: https://github.com/gruntjs/grunt/wiki/Getting-started
+
 [js2uri]: http://npmjs.org/package/js2uri
