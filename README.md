@@ -1,9 +1,7 @@
 # text2datauri
 
-[![NPM version][npm-image]][npm-url]
-[![Build Status][build-image]][build-url]
-[![Dependency Status][dep-image]][dep-url]
-[![devDependency Status][devDep-image]][devDep-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url]
+[![Dependency Status][dep-image]][dep-url] [![devDependency Status][devDep-image]][devDep-url]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
 simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
@@ -115,7 +113,7 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
-0.0.22 - 0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept new docs
+0.0.23 - 0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept new docs
 (Markdown parser issues with npmjs.com v. github.com)
 
 0.0.19: update license info in `package.json` to use new property and SPDX format
@@ -162,17 +160,26 @@ Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 Copyright (c) 2012-2015 Tom King.
 Licensed under the MIT license.
 
-<!-- Badge URLs -->
+<!-- reference URLs -->
+
 [build-image]: https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master
+
 [build-url]: https://travis-ci.org/mobilemind/text2datauri
+
 [npm-image]: https://img.shields.io/npm/v/text2datauri.svg
+
 [npm-url]: https://www.npmjs.com/package/text2datauri
+
 [dep-image]: https://david-dm.org/mobilemind/text2datauri.svg
+
 [dep-url]: https://david-dm.org/mobilemind/text2datauri
+
 [devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
+
 [devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
 
-<!-- Reference links -->
 [grunt]: http://gruntjs.com/
+
 [getting-started]: http://gruntjs.com/getting-started
+
 [js2uri]: http://npmjs.org/package/js2uri
