@@ -115,6 +115,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept new docs
+
 0.0.19: update license info in `package.json` to use new property and SPDX format
 
 0.0.18: update devDependencies and copyright info
