@@ -113,6 +113,9 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+
+0.0.24: update package.json to support use of `node` >= 0.10.0 (e.g., now works w/ node 4.0.x)
+
 0.0.23 - 0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept new docs
 (Markdown parser issues with npmjs.com v. github.com)
 
