@@ -114,6 +114,8 @@ Add unit tests for any new or changed functionality. Lint and test your code usi
 
 ## Release History
 
+0.0.27: update package.json to work with `grunt-contrib-jshint` >=0.11.0 to allow use of 1.00 and beyond
+
 0.0.26: update package.json to work with `grunt-contrib-jshint` 0.11.x - 0.12.x; update Copyright in README
 
 0.0.25: update .travis.yml to test with `node` 0.10 0.11, 0.12, 4.2 and 5.0
