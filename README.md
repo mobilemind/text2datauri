@@ -113,6 +113,7 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+1.0.0: update to current LTS versions of `node` (4.x, 5.x); update to use `grunt-contrib-...` 1.0.0 or higher
 
 0.0.27: update package.json to work with `grunt-contrib-jshint` >=0.11.0 to allow use of 1.00 and beyond
 
