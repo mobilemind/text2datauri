@@ -22,6 +22,7 @@ module.exports = function(grunt) {
         eqnull: true,
         lastsemic: true,
         scripturl: true,
+        sub: true,
         validthis: true,
         // environments
         node: true
