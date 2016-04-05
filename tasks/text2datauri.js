@@ -8,8 +8,8 @@
 "use strict";
 module.exports = function(grunt) {
   // HELPERS & PRIVATE VARS
-  var text2datauriHelpers = require('./text2datauriHelpers.js');
-  var configOptions = {};
+  const text2datauriHelpers = require('./text2datauriHelpers.js');
+  let configOptions = {};
 
   // Please see the grunt documentation for more information regarding task and
   // helper creation: https://github.com/gruntjs/grunt/blob/master/docs/toc.md
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
   // ==========================================================================
 
   // default version to  metadata version OR pkg.version if available
-  var text2datauri_pkgVersion = '';
+  let text2datauri_pkgVersion = '';
   if (undefined !== grunt.config('meta.version')) text2datauri_pkgVersion = grunt.config('meta.version');
   else if (undefined !== grunt.config('pkg.version')) text2datauri_pkgVersion = grunt.config('pkg.version');
 
@@ -38,18 +38,18 @@ module.exports = function(grunt) {
       });
 
       // build prefix
-      var uriPrefix = text2datauriHelpers.text2dataPrefix(configOptions);
+      const uriPrefix = text2datauriHelpers.text2dataPrefix(configOptions);
 
       // loop through files
-      var files = this.files;
+      let files = this.files;
       files.forEach(function(filepair) {
-        var rawStr =  grunt.file.read(filepair.src);
+        let rawStr =  grunt.file.read(filepair.src);
         // here's where ascii/utf-8 might be validated or pre-processed
         // encode rawStr to data value
-        var dataStr = text2datauriHelpers.text2data(rawStr, configOptions.encoding);
+        let dataStr = text2datauriHelpers.text2data(rawStr, configOptions.encoding);
 
         // write full URI to file & log
-        var fullURI = uriPrefix + dataStr;
+        let fullURI = uriPrefix + dataStr;
         grunt.file.write(filepair.dest, fullURI);
         console.log(filepair.src + ' -> ' + filepair.dest + ' (' + dataStr.length + ' bytes of data, ' + fullURI.length + ' total bytes)');
       });

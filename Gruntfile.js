@@ -7,25 +7,7 @@ module.exports = function(grunt) {
     jshint: {
       files: ['Gruntfile.js', 'tasks/text2datauri*.js', 'test/text2datauri*.js'],
       options: {
-        bitwise: true,
-        // esversion: 5,
-        freeze: true,
-        latedef: true,
-        noarg: true,
-        notypeof: true,
-        strict: "global",
-        trailing: true,
-        undef: true,
-        unused: true,
-        // relax options
-        boss: true,
-        eqnull: true,
-        lastsemic: true,
-        scripturl: true,
-        sub: true,
-        validthis: true,
-        // environments
-        node: true
+        jshintrc: '.jshintrc'
       }
     },
     nodeunit: {

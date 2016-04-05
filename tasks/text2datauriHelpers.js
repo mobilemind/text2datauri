@@ -13,15 +13,15 @@
 
   // string prefix driven by config options
   exports.text2dataPrefix = function(uriOpts) {
-    var protocol = (undefined !== uriOpts.protocol ? uriOpts.protocol : '');
-    var mimeType = (undefined !== uriOpts.mimeType ? uriOpts.mimeType : '');
-    var prefix = protocol + mimeType;
-    var targetCharset = (undefined !== uriOpts.targetCharset ? uriOpts.targetCharset : 'utf-8');
+    const protocol = (undefined !== uriOpts.protocol ? uriOpts.protocol : '');
+    const mimeType = (undefined !== uriOpts.mimeType ? uriOpts.mimeType : '');
+    let prefix = protocol + mimeType;
+    const targetCharset = (undefined !== uriOpts.targetCharset ? uriOpts.targetCharset : 'utf-8');
     if ('' !== targetCharset)  {
       prefix += ('' === mimeType ? '' : ';');
       prefix += 'charset=utf-8';
     }
-    var encoding = (undefined !== uriOpts.encoding ? uriOpts.encoding : 'base64');
+    const encoding = (undefined !== uriOpts.encoding ? uriOpts.encoding : 'base64');
     if ('base64' === encoding) {
       prefix += ('' === mimeType + targetCharset ? '' : ';');
       prefix += encoding + ',';
