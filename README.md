@@ -113,6 +113,8 @@ In lieu of a formal style guide, take care to maintain the existing coding style
 Add unit tests for any new or changed functionality. Lint and test your code using [grunt].
 
 ## Release History
+1.0.2: updated package.json and .travis.tml to use `node` >5.0.0 and `grunt` >1.0.0
+
 1.0.1: update internals to use es6 let/const; update Travis CI `.travis.yml` to improve build checks/process
 
 1.0.0: update to current LTS versions of `node` (4.x, 5.x); update to use `grunt-contrib-...` 1.0.0 or higher
