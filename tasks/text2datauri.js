@@ -43,7 +43,7 @@ module.exports = function(grunt) {
       // loop through files
       let files = this.files;
       files.forEach(function(filepair) {
-        let rawStr =  grunt.file.read(filepair.src);
+        let rawStr = grunt.file.read(filepair.src);
         // here's where ascii/utf-8 might be validated or pre-processed
         // encode rawStr to data value
         let dataStr = text2datauriHelpers.text2data(rawStr, configOptions.encoding);
