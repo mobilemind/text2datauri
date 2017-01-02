@@ -201,7 +201,7 @@ Gruntfile.js edited to remove `es5: true,` (now default for jshint 0.5.2)
 
 ## License
 
-Copyright (c) 2012-2016 Tom King.
+Copyright (c) 2012-2017 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
