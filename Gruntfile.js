@@ -12,6 +12,9 @@ module.exports = function(grunt) {
     },
     nodeunit: {
       files: ['test/text2datauri*.js']
+    },
+    yamllint: {
+			files: { src: [ '*.yaml' ] }
     }
   });
 
@@ -22,7 +25,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
 
   // test
-  grunt.registerTask('test',  ['jshint:files', 'nodeunit:files']);
+  grunt.registerTask('test', ['jshint:files', 'nodeunit:files', 'yamllint']);
+
+  // Load "yamllint" plugin
+  grunt.loadNpmTasks('grunt-yamllint');
 
   // Default task
   grunt.registerTask('default', ['test']);
