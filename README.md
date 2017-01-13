@@ -2,10 +2,10 @@
 
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url]
 [![Dependency Status][dep-image]][dep-url] [![devDependency Status][devDep-image]][devDep-url]
-[![Code Climate](https://codeclimate.com/repos/5869627babdcb93a130096a5/badges/079a34796fa683ad28a1/gpa.svg)](https://codeclimate.com/repos/5869627babdcb93a130096a5/feed)
+[![CodeCLimate Status][codeClimate-image]][codeClimate-url]
 
-A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64 or
-simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
+A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
+or simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
 bookmark URI encoded in _base64_. Or use it to convert a CSV file to a
 `data:text/csv;charset=utf-8,...` URI using basic `encodeURIComponent()` encoding.
 It may also be useful for creating URLs to communicate between web apps and iOS
@@ -125,8 +125,8 @@ module.exports = function(grunt) {
 ## Contributing
 
 In lieu of a formal style guide, take care to maintain the existing coding style.
-Add unit tests for any new or changed functionality. Lint and test your code using
-[grunt].
+Add unit tests for any new or changed functionality. Lint and test your code
+using [grunt].
 
 ## Release History
 
@@ -221,6 +221,10 @@ Licensed under the MIT license.
 [devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
 
 [devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
+
+[codeClimate-image]: https://codeclimate.com/github/mobilemind/text2datauri/badges/gpa.svg
+
+[codeClimate-url]: https://codeclimate.com/github/mobilemind/text2datauri
 
 [grunt]: http://gruntjs.com/
 
