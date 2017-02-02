@@ -130,6 +130,8 @@ using [grunt].
 
 ## Release History
 
+1.0.4: switch to eslint and apply best practices feedback from it
+
 1.0.3: updates based on lint and for Code Climate testing/feedback
 
 1.0.2: updated package.json and .travis.tml to use `node` >5.0.0 and `grunt` >1.0.0
