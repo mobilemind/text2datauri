@@ -5,11 +5,15 @@
 (function(exports) {
   // encoding in base64 or encodeURIComponent()
   exports.text2data = function(rawString, encodingType) {
-    if (undefined === rawString) return '';
-    if ('uri' === encodingType) return encodeURIComponent(rawString);
-    else return new Buffer(rawString).toString('base64');
+    if (undefined === rawString) {
+      return '';
+    }
+    if ('uri' === encodingType) {
+      return encodeURIComponent(rawString);
+    } else {
+      return new Buffer(rawString).toString('base64');
+    }
   };
-
 
   // string prefix driven by config options
   exports.text2dataPrefix = function(uriOpts) {
@@ -26,7 +30,9 @@
       prefix += '' === mimeType + targetCharset ? '' : ';';
       prefix += encoding + ',';
     }
-    if ('' !== mimeType + targetCharset && 'uri' === encoding) prefix += ',';
+    if ('' !== mimeType + targetCharset && 'uri' === encoding) {
+      prefix += ',';
+    }
     return prefix;
   };
 }(typeof exports === 'object' && exports || this));
