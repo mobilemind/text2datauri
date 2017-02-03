@@ -3,15 +3,17 @@ module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
-    eslint: {
-      target: ['Gruntfile.js', 'tasks/text2datauri*.js', 'test/text2datauri*.js']
+    "pkg": grunt.file.readJSON('package.json'),
+    "eslint": {
+      "target": ['Gruntfile.js', 'tasks/text2datauri*.js', 'test/text2datauri*.js']
     },
-    nodeunit: {
-      files: ['test/text2datauri*.js']
+    "nodeunit": {
+      "files": ['test/text2datauri*.js']
     },
-    yamllint: {
-      files: { src: [ '*.yaml' ] }
+    "yamllint": {
+      "files": {
+        "src": ['*.yaml']
+      }
     }
   });
 
