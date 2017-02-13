@@ -1,5 +1,5 @@
 "use strict";
-const text2datauriHelpers = require('../tasks/text2datauriHelpers.js');
+const text2datauriHelpers = require("../tasks/text2datauriHelpers.js");
 /*
   ======== A Handy Little Nodeunit Reference ========
   https://github.com/caolan/nodeunit
@@ -29,69 +29,64 @@ exports.text2datauri = {
 		test.expect(10);
 
 		const optsToString = function (opts) {
-      return 'protocol:' + opts.protocol + ', mimeType: ' + opts.mimeType + ', targetCharset: ' + opts.targetCharset + ', encoding: ' + opts.encoding;
+      return "protocol:" + opts.protocol + ", mimeType: " + opts.mimeType + ", targetCharset: " + opts.targetCharset + ", encoding: " + opts.encoding;
     };
 
 		// test opts undefined
 		const optsUndefined = {};
-		let expectedVal = 'charset=utf-8;base64,';
+		let expectedVal = "charset=utf-8;base64,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(optsUndefined),
-			expectedVal, 'text2data all options undefined should return "' + expectedVal + '"');
+			expectedVal, "text2data all options undefined should return '" + expectedVal + "'");
 
 		// test opts all null
-		let opts = {"protocol": '', "mimeType": '', "targetCharset": '', "encoding": ''};
-		expectedVal = '';
+		let opts = {"protocol": "", "mimeType": "", "targetCharset": "", "encoding": ""};
+		expectedVal = "";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data all options null should return "' + expectedVal + '"');
+			expectedVal, "text2data all options null should return '" + expectedVal + "'");
 
 		// test opts all null, EXCEPT encoding: uri
-		opts = {"protocol": '', "mimeType": '', "targetCharset": '', "encoding": 'uri'};
-		expectedVal = '';
+		opts = {"protocol": "", "mimeType": "", "targetCharset": "", "encoding": "uri"};
+		expectedVal = "";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data all options null EXCEPT uri encoding returned "' + text2datauriHelpers.text2dataPrefix(opts) + '" and should return "' + expectedVal + '"');
+			expectedVal, "text2data all options null EXCEPT uri encoding returned '" + text2datauriHelpers.text2dataPrefix(opts) + "' and should return '" + expectedVal + "'");
 
 		// test opts all null, EXCEPT encoding: base64
-		opts = {"protocol": '', "mimeType": '', "targetCharset": '', "encoding": 'base64'};
-		expectedVal = 'base64,';
+		opts = {"protocol": "", "mimeType": "", "targetCharset": "", "encoding": "base64"};
+		expectedVal = "base64,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data all options null EXCEPT base64 encoding should return "' + expectedVal + '"');
+			expectedVal, "text2data all options null EXCEPT base64 encoding should return '" + expectedVal + "'");
 
 		// test opts all expanded, base64 encoding
-		opts = {"protocol": 'data:', "mimeType": 'text/html', "targetCharset": 'utf-8', "encoding": 'base64'};
-		expectedVal = 'data:text/html;charset=utf-8;base64,';
+		opts = {"protocol": "data:", "mimeType": "text/html", "targetCharset": "utf-8", "encoding": "base64"};
+		expectedVal = "data:text/html;charset=utf-8;base64,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
 
 		// test opts all expanded, uri encoding
-		opts = {"protocol": 'data:', "mimeType": 'text/csv', "targetCharset": 'utf-8', "encoding": 'uri'};
-		expectedVal = 'data:text/csv;charset=utf-8,';
+		opts = {"protocol": "data:", "mimeType": "text/csv", "targetCharset": "utf-8", "encoding": "uri"};
+		expectedVal = "data:text/csv;charset=utf-8,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
-
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
 		// test opts all expanded, no mimeType, base64 encoding
-		opts = {"protocol": 'data:', "mimeType": '', "targetCharset": 'utf-8', "encoding": 'base64'};
-		expectedVal = 'data:charset=utf-8;base64,';
+		opts = {"protocol": "data:", "mimeType": "", "targetCharset": "utf-8", "encoding": "base64"};
+		expectedVal = "data:charset=utf-8;base64,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
-
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
 		// test opts all expanded, no mimeType, uri encoding
-		opts = {"protocol": 'data:', "mimeType": '', "targetCharset": 'utf-8', "encoding": 'uri'};
-		expectedVal = 'data:charset=utf-8,';
+		opts = {"protocol": "data:", "mimeType": "", "targetCharset": "utf-8", "encoding": "uri"};
+		expectedVal = "data:charset=utf-8,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
-
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
 		// test opts ONLY base64 encoding + charset
-		opts = {"protocol": '', "mimeType": '', "targetCharset": 'utf-8', "encoding": 'base64'};
-		expectedVal = 'charset=utf-8;base64,';
+		opts = {"protocol": "", "mimeType": "", "targetCharset": "utf-8", "encoding": "base64"};
+		expectedVal = "charset=utf-8;base64,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
-
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
 		// test opts ONLY uri encoding + charset
-		opts = {"protocol": '', "mimeType": '', "targetCharset": 'utf-8', "encoding": 'uri'};
-		expectedVal = 'charset=utf-8,';
+		opts = {"protocol": "", "mimeType": "", "targetCharset": "utf-8", "encoding": "uri"};
+		expectedVal = "charset=utf-8,";
 		test.deepEqual(text2datauriHelpers.text2dataPrefix(opts),
-			expectedVal, 'text2data "' + optsToString(opts) + '" should return "' + expectedVal + '"');
-
+			expectedVal, "text2data '" + optsToString(opts) + "' should return '" + expectedVal + "'");
     test.done();
   }
 };
