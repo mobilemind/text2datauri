@@ -38,7 +38,7 @@ exports.text2datauri = {
 
 		// test encoding null, sample data String
 		encoding = "";
-		testVal = ';/?:@&=+," "[]\'\\%<>|';
+		testVal = ";/?:@&=+,\" \"[]'\\%<>|";
 		expectedVal = "Oy8/OkAmPSssIiAiW10nXCU8Pnw=";
 		test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
 			expectedVal,
@@ -54,8 +54,8 @@ exports.text2datauri = {
 
 		// test encoding base64, sample data String
 		encoding = "base64";
-		testVal = ';/?:@&=+," "[]\'\\%<>|';
-		expectedVal = 'Oy8/OkAmPSssIiAiW10nXCU8Pnw=';
+		testVal = ";/?:@&=+,\" \"[]'\\%<>|";
+		expectedVal = "Oy8/OkAmPSssIiAiW10nXCU8Pnw=";
 		test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
 			expectedVal,
 			"text2data '" + testVal + "' (base64 encoding) should return '" + expectedVal + "'");
@@ -70,7 +70,7 @@ exports.text2datauri = {
 
 		// test encoding uri, sample data string
 		encoding = "uri";
-		testVal = ';/?:@&=+," "[]\'\\%<>|';
+		testVal = ";/?:@&=+,\" \"[]'\\%<>|";
 		expectedVal = "%3B%2F%3F%3A%40%26%3D%2B%2C%22%20%22%5B%5D'%5C%25%3C%3E%7C";
 		test.deepEqual(text2datauriHelpers.text2data(testVal, encoding),
 			expectedVal,

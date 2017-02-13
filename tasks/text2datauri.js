@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         grunt.file.write(filepair.dest, fullURI);
         console.log(filepair.src + " -> " + filepair.dest + " (" + dataStr.length + " bytes of data, " + fullURI.length + " total bytes)");
       });
-    } catch(e) {
+    } catch (e) {
       // warn on error
       grunt.warn(this.name + " found errors: " + e.message, 10);
       return false;
