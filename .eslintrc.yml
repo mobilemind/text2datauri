@@ -1,14 +1,15 @@
 root: true
 
+ecmaVersion: 6
+sourceType: script
+
 ecmaFeatures:
-  modules: true
+  globalReturn: false
   jsx: false
+  modules: true
 
 env:
-  amd: false
-  browser: false
   es6: true
-  jquery: false
   node: true
 
 plugins:
