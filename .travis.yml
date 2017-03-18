@@ -11,7 +11,7 @@ node_js:
 - '6'
 - '7'
 before_script:
-- npm set progress=false ; npm install -g grunt-cli ; npm install eslint@latest ; npm dedupe
+- npm set progress=false ; npm install -g grunt-cli
 notifications:
   slack:
     secure: b1k8lo3qvcHi+QCTUwun1fX9+fbnZQoQ77XQ1tS3NoynSJ1K3TMDYNs08uzjQLSvPo877mVDdAPUor8mi0VMM0zukOwlDevxv1ht0nh+MiM21a82S0wqzxzgO5KYbnlFRPW1FzjKZ+Awv7w2sFpZpGkrxPBSM0HEjsFTffarF0E=
