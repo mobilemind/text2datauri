@@ -3,7 +3,6 @@ module.exports = function(grunt) {
 
   // Project configuration
   grunt.initConfig({
-    "pkg": grunt.file.readJSON("package.json"),
     "eslint": {
       "options": {
         "configFile": ".eslintrc.yml"
@@ -13,6 +12,7 @@ module.exports = function(grunt) {
     "nodeunit": {
       "files": ["test/text2datauri*.js"]
     },
+    "pkg": grunt.file.readJSON("package.json"),
     "yamllint": {
       "files": {
         "src": [".*.yml", "*.yml", "*.yaml"]
