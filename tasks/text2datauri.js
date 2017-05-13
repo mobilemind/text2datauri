@@ -25,11 +25,11 @@ module.exports = function(grunt) {
       // set config options
       configOptions = this.options({
         // Default options
-        "sourceCharset": "utf-8", // or "ascii"; actual format is not validated by text2datauri
-        "protocol": "data:", // any string; this is not validated by text2datauri
+        "encoding": "base64", // or "uri"; use "uri" for encodeURIComponent() encoding
         "mimeType": "text/html", // any string;  this is not validated by text2datauri
-        "targetCharset": "utf-8", // currently only utf-8 is valid
-        "encoding": "base64" // or "uri"; use "uri" for encodeURIComponent() encoding
+        "protocol": "data:", // any string; this is not validated by text2datauri
+        "sourceCharset": "utf-8", // or "ascii"; actual format is not validated by text2datauri
+        "targetCharset": "utf-8" // currently only utf-8 is valid
       });
 
       // build prefix
