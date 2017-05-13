@@ -28,7 +28,7 @@
     ;
     if ("base64" === encoding) {
       prefix += "" === mimeType + targetCharset ? "" : ";";
-      prefix += encoding + ",";
+      prefix += `${encoding},`;
     }
     if ("" !== mimeType + targetCharset && "uri" === encoding) {
       prefix += ",";
