@@ -16,18 +16,29 @@
 
   // string prefix driven by config options
   exports.text2dataPrefix = function(uriOpts) {
-    const protocol = undefined !== uriOpts.protocol ? uriOpts.protocol : "";
-    const mimeType = undefined !== uriOpts.mimeType ? uriOpts.mimeType : "";
+    const protocol = undefined !== uriOpts.protocol ?
+      uriOpts.protocol :
+      "";
+    const mimeType = undefined !== uriOpts.mimeType ?
+      uriOpts.mimeType :
+      "";
     let prefix = protocol + mimeType;
-    const targetCharset = undefined !== uriOpts.targetCharset ? uriOpts.targetCharset : "utf-8";
+    const targetCharset = undefined !== uriOpts.targetCharset ?
+      uriOpts.targetCharset :
+      "utf-8";
     if ("" !== targetCharset) {
-      prefix += "" === mimeType ? "" : ";";
+      prefix += "" === mimeType ?
+        "" :
+        ";";
       prefix += "charset=utf-8";
     }
-    const encoding = undefined !== uriOpts.encoding ? uriOpts.encoding : "base64"
-    ;
+    const encoding = undefined !== uriOpts.encoding ?
+      uriOpts.encoding :
+      "base64";
     if ("base64" === encoding) {
-      prefix += "" === mimeType + targetCharset ? "" : ";";
+      prefix += "" === mimeType + targetCharset ?
+        "" :
+        ";";
       prefix += `${encoding},`;
     }
     if ("" !== mimeType + targetCharset && "uri" === encoding) {

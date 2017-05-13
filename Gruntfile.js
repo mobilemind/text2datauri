@@ -4,9 +4,9 @@ module.exports = function(grunt) {
   grunt.initConfig({
     "eslint": {
       "options": {"configFile": ".eslintrc.yml"},
-      "target": ["Gruntfile.js", "tasks/text2datauri*.js", "test/text2datauri*.js"]
+      "target": ["Gruntfile.js", "tasks/text2data*.js", "test/text2data*.js"]
     },
-    "nodeunit": {"files": ["test/text2datauri*.js"]},
+    "nodeunit": {"files": ["test/text2data*.js"]},
     "pkg": grunt.file.readJSON("package.json"),
     "yamllint": {"files": {"src": [".*.yml", "*.yml", "*.yaml"]}}
   });
