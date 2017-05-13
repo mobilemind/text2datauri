@@ -88,7 +88,7 @@ rules:
   no-void: 2
   no-warning-comments: 2
   no-with: 2
-  ## prefer-promise-reject-errors: 2 // not supported by Code Climate, Feb 2017
+  prefer-promise-reject-errors: 2
   radix: 2
   require-await: 2
   vars-on-top: 2
@@ -119,7 +119,7 @@ rules:
   no-process-env: 2
   no-process-exit: 2
   no-restricted-modules: 2
-  no-sync: 0
+  no-sync: 2
 
   # Stylistic Issues
   array-bracket-spacing: 2
@@ -179,7 +179,7 @@ rules:
   no-unneeded-ternary: 2
   no-whitespace-before-property: 2
   nonblock-statement-body-position: 2
-  object-curly-newline: 0
+  object-curly-newline: 2
   object-curly-spacing: 2
   object-property-newline: 0
   one-var-declaration-per-line: 0
@@ -192,7 +192,7 @@ rules:
   require-jsdoc: 2
   semi-spacing: 2
   semi: 2
-  sort-keys: 0
+  sort-keys: 2
   sort-vars: 2
   space-before-blocks: 2
   space-before-function-paren: 0
@@ -223,7 +223,7 @@ rules:
   prefer-numeric-literals: 2
   prefer-rest-params: 2
   prefer-spread: 2
-  prefer-template: 0
+  prefer-template: 2
   rest-spread-spacing: 2
   sort-imports: 2
   symbol-description: 2
