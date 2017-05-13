@@ -1,28 +1,12 @@
 {
-  "name": "text2datauri",
-  "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
-  "version": "1.0.4",
-  "homepage": "https://github.com/mobilemind/text2datauri",
   "author": {
     "email": "mobilemind@pobox.com",
     "name": "\"mobilemind\" Tom King",
     "url": "https://mobilemind.net/"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/mobilemind/text2datauri.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mobilemind/text2datauri/issues"
-  },
-  "engines": {
-    "node": ">5.0.0"
-  },
-  "license": "MIT",
-  "main": "Gruntfile.js",
-  "dependencies": {
-    "grunt": ">1.0.0"
-  },
+  "bugs": {"url": "https://github.com/mobilemind/text2datauri/issues"},
+  "dependencies": {"grunt": ">1.0.0"},
+  "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
   "devDependencies": {
     "eslint-plugin-no-storage": ">=1.0.2",
     "eslint-plugin-security": ">=1.3.0",
@@ -31,8 +15,16 @@
     "grunt-eslint": ">=19.0.0",
     "grunt-yamllint": ">=0.2.0"
   },
+  "engines": {"node": ">5.0.0"},
+  "homepage": "https://github.com/mobilemind/text2datauri",
   "keywords": ["gruntplugin"],
-  "scripts": {
-    "test": "grunt test"
-  }
+  "license": "MIT",
+  "main": "Gruntfile.js",
+  "name": "text2datauri",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mobilemind/text2datauri.git"
+  },
+  "scripts": {"test": "grunt test"},
+  "version": "1.0.4"
 }
