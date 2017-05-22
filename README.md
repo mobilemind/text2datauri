@@ -115,7 +115,7 @@ module.exports = function(grunt) {
     // ** text2datauri defaults are shown. Note the file spec uses compact form
     text2datauri:  {
       options: {
-        "encoding": "base64" // "base64" or "uri"; use "uri" for encodeURIComponent()
+        "encoding": "base64", // "base64" or "uri"; use "uri" for encodeURIComponent()
         "mimeType": "text/html", // any string;  this is not validated by text2datauri
         "protocol": "data:", // any string; this is not validated by text2datauri
         "sourceCharset": "utf-8", // "utf-8" or "ascii"; actual format not validated
