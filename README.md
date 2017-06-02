@@ -140,6 +140,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.0.5: bump version to republish with improvements for node 8 + npm 5
+
 1.0.4: switch to eslint and apply best practices feedback from it
 
 1.0.3: updates based on lint and for Code Climate testing/feedback
