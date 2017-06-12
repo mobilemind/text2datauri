@@ -1,16 +1,16 @@
 root: true
 
-ecmaVersion: 6
-sourceType: script
-
-ecmaFeatures:
-  globalReturn: false
-  jsx: false
-  modules: true
-
 env:
   es6: true
   node: true
+
+parserOptions:
+  ecmaFeatures:
+    globalReturn: false
+    jsx: false
+    modules: true
+  ecmaVersion: 6
+  sourceType: script
 
 plugins:
 - no-storage
@@ -96,7 +96,7 @@ rules:
   yoda: 0
 
   # Strict
-  strict: 2
+  strict: [2, "global"]
 
   # Variables
   init-declarations: 2
