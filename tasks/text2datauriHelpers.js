@@ -11,7 +11,7 @@
     if ("uri" === encodingType) {
       return encodeURIComponent(rawString);
     }
-    return new Buffer(rawString).toString("base64");
+    return Buffer.from(rawString).toString("base64");
   };
 
   // string prefix driven by config options
