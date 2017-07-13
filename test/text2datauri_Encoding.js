@@ -20,11 +20,11 @@ const text2datauriHelpers = require("../tasks/text2datauriHelpers.js");
 */
 
 exports.text2datauri = {
-  "setUp": function(done) {
+  setUp (done) {
     // setup here
     done();
   },
-  "text2data encoding tests": function(test) {
+  text2datauri_Encoding (test) {
     test.expect(9);
 
     // test encoding null, null data string & results

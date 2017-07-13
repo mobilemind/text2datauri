@@ -19,11 +19,11 @@ const text2datauriHelpers = require("../tasks/text2datauriHelpers.js");
 */
 
 exports.text2datauri = {
-  "setUp": function(done) {
+  setUp (done) {
     // setup here
     done();
   },
-  "text2dataPrefix tests": function(test) {
+  text2datauri_Prefix (test) {
     test.expect(10);
 
     const optsToString = function (opts) {
