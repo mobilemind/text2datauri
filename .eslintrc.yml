@@ -217,6 +217,10 @@ rules:
 
   # node
   # using recommended; https://github.com/mysticatea/eslint-plugin-node
+  node/no-extraneous-import: 2
+  node/no-missing-import: 2
+  node/no-missing-require: 2
+  node/no-unpublished-import: 2
 
   # no-storage
   no-storage/no-browser-storage: 2
