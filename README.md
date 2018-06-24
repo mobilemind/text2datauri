@@ -140,6 +140,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.1.2: update dependencies (clears `npm audit` warnings); bump version
+
 1.1.0: drop node 5; enhance eslint rule checks; bump version
 
 1.0.5: bump version to republish with improvements for node 8 + npm 5
