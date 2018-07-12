@@ -43,7 +43,7 @@ data:text/csv;charset=utf-8,%22Crosby%2C%20Stills%2C%20Nash%20%26%20Young%22%2C%
 ### Install
 
 Install this grunt plugin into a project with:
-`npm install text2datauri --save-dev `. The `--save-dev` option adds
+`npm install text2datauri --save-dev`. The `--save-dev` option adds
 `text2datauri` to the _devDependencies_ section of the project [package.json]
 file.
 
