@@ -18,7 +18,7 @@ const text2datauriHelpers = require("../tasks/text2datauriHelpers.js");
     test.ifError(value)
 */
 
-exports.text2datauri = {
+module.exports.text2datauri = {
   setUp (done) {
     // setup here
     done();
