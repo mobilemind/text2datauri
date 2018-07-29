@@ -53,7 +53,7 @@ Add the following to the `grunt.initConfig` section of the project
 `Gruntfile.js` file:
 
 ```javascript
-"text2datauri":  {
+"text2datauri": {
   "dist/outputFilename.uri": "dist/lintedAndMinifiedFile.js"
 }
 ```
@@ -113,8 +113,8 @@ module.exports = function(grunt) {
     // },
     //
     // ** text2datauri defaults are shown. Note the file spec uses compact form
-    text2datauri:  {
-      options: {
+    "text2datauri": {
+      "options": {
         "encoding": "base64", // "base64" or "uri"; use "uri" for encodeURIComponent()
         "mimeType": "text/html", // any string;  this is not validated by text2datauri
         "protocol": "data:", // any string; this is not validated by text2datauri
