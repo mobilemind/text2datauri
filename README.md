@@ -140,6 +140,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.2.1: drop support for node <= 9.0.0 ; bump version
+
 1.2.0: drop node 6 support; bump version
 
 1.1.2: update dependencies (clears `npm audit` warnings); bump version
