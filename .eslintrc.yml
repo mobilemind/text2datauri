@@ -228,7 +228,7 @@ rules:
   node/prefer-global/url-search-params: 2
   node/prefer-global/url: 2
 
-  # no-storage - https://github.com/Implisit/eslint-plugin-no-storage
+  # no-storage https://github.com/Implisit/eslint-plugin-no-storage
   no-storage/no-browser-storage: 2
 
   # security
