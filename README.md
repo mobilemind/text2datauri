@@ -140,7 +140,9 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.2.1: at long last properly make `grunt` a _peerDependency_ ; bump version
+1.2.3: add `.npmignore` to repo to improve `npm publish` ; bump version
+
+1.2.2: at long last properly make `grunt` a _peerDependency_ ; bump version
 
 1.2.1: drop support for node <= 9.0.0 ; bump version
 
