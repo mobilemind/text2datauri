@@ -8,7 +8,6 @@
     "url": "https://github.com/mobilemind/text2datauri/issues"
   },
   "dependencies": {
-    "enabled": false
   },
   "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
   "devDependencies": {
