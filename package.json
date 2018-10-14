@@ -7,8 +7,7 @@
   "bugs": {
     "url": "https://github.com/mobilemind/text2datauri/issues"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
   "devDependencies": {
     "eslint-plugin-no-storage": "1.0.2",
@@ -21,7 +20,7 @@
     "grunt": "1.0.3"
   },
   "engines": {
-    "node": ">9.0.0"
+    "node": ">8.0.0"
   },
   "homepage": "https://github.com/mobilemind/text2datauri",
   "keywords": [
@@ -31,7 +30,7 @@
   "main": "Gruntfile.js",
   "name": "text2datauri",
   "peerDependencies": {
-    "grunt": ">=1.0.3"
+    "grunt": "1.0.3"
   },
   "readmeFilename": "README.md",
   "repository": {
@@ -41,5 +40,5 @@
   "scripts": {
     "test": "grunt test"
   },
-  "version": "1.2.3"
+  "version": "1.2.4"
 }
