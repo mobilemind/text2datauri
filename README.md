@@ -140,6 +140,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.2.6: streamline dependencies- move lint outside of package/grunt; bump version
+
 1.2.5: exclude renovate.json from published package ; bump version
 
 1.2.4: pin dependencies; integrate renovatebot ; bump version
