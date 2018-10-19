@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   // Project configuration
   grunt.initConfig({
     "nodeunit": {"files": ["test/text2data*.js"]},
-    "pkg": grunt.file.readJSON("package.json"),
+    "pkg": grunt.file.readJSON("package.json")
   });
 
   // Load plugins: "nodeunit"
