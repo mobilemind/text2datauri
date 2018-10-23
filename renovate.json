@@ -4,5 +4,8 @@
   ],
   "node": {
     "supportPolicy": ["lts_active"]
+  },
+  "travis": {
+    "enabled": true
   }
 }
