@@ -1,3 +1,5 @@
+.eslintignore
+.eslintrc.yml
 .gitattributes
 .gitignore
 .snyk
