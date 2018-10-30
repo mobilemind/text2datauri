@@ -2,6 +2,7 @@
 
 [![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url]
 [![Dependency Status][dep-image]][dep-url] [![devDependency Status][devDep-image]][devDep-url]
+[![Codacy Badge][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
 or simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
@@ -259,5 +260,9 @@ Licensed under the MIT license.
 [devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
 
 [devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
+
+[Codacy-image]: https://api.codacy.com/project/badge/Grade/7cb819760c274a2f898b9c19b2d2986a
+
+[Codacy-dash]: https://www.codacy.com/app/mobilemind/text2datauri
 
 [js2uri]: http://npmjs.org/package/js2uri
