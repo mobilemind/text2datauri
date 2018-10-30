@@ -44,7 +44,7 @@ data:text/csv;charset=utf-8,%22Crosby%2C%20Stills%2C%20Nash%20%26%20Young%22%2C%
 
 Install this grunt plugin into a project with:
 `npm install text2datauri --save-dev`. The `--save-dev` option adds
-`text2datauri` to the _devDependencies_ section of the project [package.json]
+`text2datauri` to the _devDependencies_ section of the project `package.json`
 file.
 
 ### Edit Gruntfile.js
@@ -259,9 +259,5 @@ Licensed under the MIT license.
 [devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
 
 [devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
-
-[grunt]: http://gruntjs.com/
-
-[getting-started]: http://gruntjs.com/getting-started
 
 [js2uri]: http://npmjs.org/package/js2uri
