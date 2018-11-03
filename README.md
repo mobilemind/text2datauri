@@ -1,8 +1,11 @@
 # text2datauri
 
-[![NPM version][npm-image]][npm-url] [![Build Status][build-image]][build-url]
-[![Dependency Status][dep-image]][dep-url] [![devDependency Status][devDep-image]][devDep-url]
-[![Codacy Badge][Codacy-image]][Codacy-dash]
+[![Latest version on npmjs.com][npm-image]][npm-url]
+ [![Build Status][build-image]][build-url]
+ [![Dependency Status][dep-image]][dep-url]
+ [![devDependency Status][devDep-image]][devDep-url]
+ [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
+ [![Snyk Security Review Status][Snyk-image]][Snyk-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
 or simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
@@ -264,5 +267,9 @@ Licensed under the MIT license.
 [Codacy-image]: https://api.codacy.com/project/badge/Grade/7cb819760c274a2f898b9c19b2d2986a
 
 [Codacy-dash]: https://www.codacy.com/app/mobilemind/text2datauri
+
+[Snyk-image]: https://snyk.io/test/github/mobilemind/text2datauri/badge.svg?targetFile=package.json
+
+[Snyk-dash]: https://snyk.io/test/github/mobilemind/text2datauri?targetFile=package.json
 
 [js2uri]: http://npmjs.org/package/js2uri
