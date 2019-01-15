@@ -250,9 +250,9 @@ Licensed under the MIT license.
 
 <!-- reference URLs -->
 
-[build-image]: https://secure.travis-ci.org/mobilemind/text2datauri.svg?branch=master
+[build-image]: https://travis-ci.com/mobilemind/text2datauri.svg?branch=master
 
-[build-url]: https://travis-ci.org/mobilemind/text2datauri
+[build-url]: https://travis-ci.com/mobilemind/text2datauri
 
 [npm-image]: https://img.shields.io/npm/v/text2datauri.svg
 
