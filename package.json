@@ -11,7 +11,7 @@
   "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
   "devDependencies": {
     "grunt-contrib-nodeunit": "2.0.0",
-    "grunt": "1.0.3"
+    "grunt": "1.0.4"
   },
   "engines": {
     "node": ">8.0.0"
@@ -24,7 +24,7 @@
   "main": "Gruntfile.js",
   "name": "text2datauri",
   "peerDependencies": {
-    "grunt": "1.0.3"
+    "grunt": "1.0.4"
   },
   "readmeFilename": "README.md",
   "repository": {
