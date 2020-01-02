@@ -145,6 +145,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.3.0: require node 10+
+
 1.2.7: update version info & package lock
 
 1.2.6: streamline dependencies- move lint outside of package/grunt; bump version
