@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.4.3: update to grunt-contrib-nodeunit 3.0.0, update lockfile
+
 1.4.1: update `grunt` dependencies
 
 1.4.0: drop snyk as it doubled dependencies & increased build time; rely on renovatebot
