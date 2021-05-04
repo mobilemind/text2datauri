@@ -190,70 +190,9 @@ to improve build checks/process
 0.0.27: update package.json to work with `grunt-contrib-jshint` ">=0.11.0" to
 allow use of 1.00 and beyond
 
-0.0.26: update package.json to work with `grunt-contrib-jshint` 0.11.x -
-0.12.x; update Copyright in README
-
-0.0.25: update .travis.yml to test with `node` 0.10 0.11, 0.12, 4.2 and 5.0
-
-0.0.24: update package.json to support use of `node` ">=0.10.0" (e.g., now
-works w/ node 4.0.x)
-
-0.0.23 - 0.0.20: NO FUNCTIONAL CHANGE. bump version so npmjs.com will accept
-new docs (Markdown parser issues with npmjs.com v. github.com)
-
-0.0.19: update license info in `package.json` to use new property and SPDX
-format
-
-0.0.18: update devDependencies and copyright info
-
-0.0.17: work with `node` engine 0.10.x - 0.12.x
-
-0.0.16: January 22, 2015 -update to `grunt-contrib-jshint` 0.11.x; add some
-stricter checks
-
-0.0.15: June 10, 2014 - update to `grunt-contrib-nodeunit` 0.4.x
-
-0.0.14: April 21, 2014 - update to `grunt-contrib-jshint` 0.10.x
-
-0.0.13: March 26, 2014 - update to `grunt-contrib-jshint` 0.9.x;
-`grunt-contrib-nodeunit` to 0.3.x
-
-0.0.12: December 27, 2013 - update to `grunt-contrib-jshint` 0.8.x and
-streamline dependencies
-
-0.0.11: December 9, 2013 - update to `grunt-contrib-jshint` 0.7.x and
-integrate Travis CI
-
-0.0.10: November 15, 2013 - bump version and remember to update doc
-
-0.0.9: November 15, 2013 - update dependancies in `package.json`, bump version
-(forget to update doc)
-
-0.0.8: July 28, 2013 - update dependancies in `package.json`, bump version
-
-0.0.7: July 12, 2013 - update dependancies in `package.json`, bump version
-
-0.0.6: May 20, 2013 - update license URL in `package.json`, bump version
-
-0.0.5 May 18, 2013 - Update `package.json` for `node>=0.10.7` and
-`jshint >= 0.5.2`, Gruntfile.js edited to remove `"es5": true,` (now default
-for jshint 0.5.2)
-
-0.0.4 March 12, 2013 - Update package.json for node 0.10.0 (ie
-`node>=0.10.0`), `'use strict';` added to Gruntfile.js
-
-0.0.3 February 28, 2013 - Stricter jshint Gruntfile options; package.json
-updates
-
-0.0.2 February 20, 2013 - fully functional / 'beta', w/grunt 0.4.0,
-Gruntfile.js
-
-0.0.1 February 4, 2013 - initial commit / ALPHA SOFTWARE - NOT FULLY
-FUNCTIONAL
-
 ## License
 
-Copyright (c) 2012-2020 Tom King.
+Copyright (c) 2012-2021 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->

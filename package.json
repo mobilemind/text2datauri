@@ -13,7 +13,7 @@
     "grunt-contrib-nodeunit": "3.0.0"
   },
   "engines": {
-    "node": ">10.0.0"
+    "node": ">12.0.0"
   },
   "homepage": "https://github.com/mobilemind/text2datauri",
   "keywords": [
@@ -23,7 +23,7 @@
   "main": "Gruntfile.js",
   "name": "text2datauri",
   "peerDependencies": {
-    "grunt": ">1.1.0"
+    "grunt": ">1.3.0"
   },
   "readmeFilename": "README.md",
   "repository": {
@@ -33,5 +33,5 @@
   "scripts": {
     "test": "grunt test"
   },
-  "version": "1.4.3"
+  "version": "1.5.0"
 }
