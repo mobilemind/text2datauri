@@ -197,7 +197,7 @@ Licensed under the MIT license.
 
 <!-- reference URLs -->
 
-[build-image]: https://travis-ci.com/mobilemind/text2datauri.svg?branch=master
+[build-image]: https://travis-ci.com/mobilemind/text2datauri.svg?branch=main
 
 [build-url]: https://travis-ci.com/mobilemind/text2datauri
 
