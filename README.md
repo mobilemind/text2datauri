@@ -1,6 +1,7 @@
 # text2datauri
 
-[![Latest version on npmjs.com][npm-image]][npm-url]
+![repo version](https://img.shields.io/github/package-json/v/mobilemind/text2datauri.svg)
+ [![Latest version on npmjs.com][npm-image]][npm-url]
  [![Downloads from npmjs.com][npm-downloads]][npm-url]
  [![Build Status][build-image]][build-url]
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
