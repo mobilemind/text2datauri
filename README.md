@@ -3,8 +3,6 @@
 [![Latest version on npmjs.com][npm-image]][npm-url]
  [![Downloads from npmjs.com][npm-downloads]][npm-url]
  [![Build Status][build-image]][build-url]
- [![Dependency Status][dep-image]][dep-url]
- [![devDependency Status][devDep-image]][devDep-url]
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
@@ -207,13 +205,7 @@ Licensed under the MIT license.
 
 [npm-url]: https://www.npmjs.com/package/text2datauri
 
-[dep-image]: https://david-dm.org/mobilemind/text2datauri.svg
 
-[dep-url]: https://david-dm.org/mobilemind/text2datauri
-
-[devDep-image]: https://img.shields.io/david/dev/mobilemind/text2datauri.svg
-
-[devDep-url]: https://david-dm.org/mobilemind/text2datauri#info=devDependencies
 
 [Codacy-image]: https://api.codacy.com/project/badge/Grade/7cb819760c274a2f898b9c19b2d2986a
 
