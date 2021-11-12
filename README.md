@@ -206,8 +206,6 @@ Licensed under the MIT license.
 
 [npm-url]: https://www.npmjs.com/package/text2datauri
 
-
-
 [Codacy-image]: https://api.codacy.com/project/badge/Grade/7cb819760c274a2f898b9c19b2d2986a
 
 [Codacy-dash]: https://www.codacy.com/app/mobilemind/text2datauri
