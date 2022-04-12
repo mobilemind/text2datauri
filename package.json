@@ -9,8 +9,8 @@
   },
   "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
   "devDependencies": {
-    "grunt": "1.5.1",
-    "grunt-contrib-nodeunit": "4.0.0"
+    "grunt": "~1.5.2",
+    "grunt-contrib-nodeunit": "^4.0.0"
   },
   "engines": {
     "node": ">12.22.4"
