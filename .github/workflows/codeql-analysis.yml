@@ -19,6 +19,7 @@ on:
     branches: [ main ]
   schedule:
     - cron: '42 20 * * 2'
+  workflow_dispath:
 
 jobs:
   analyze:
