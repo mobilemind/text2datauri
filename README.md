@@ -143,6 +143,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.6.0: drop support for node 12, as 14 becomes node LTS
+
 1.4.3: update to grunt-contrib-nodeunit 3.0.0, update lockfile
 
 1.4.1: update `grunt` dependencies
@@ -151,23 +153,13 @@ code using `eslint` (preferred) or `jshint`.
 
 1.3.0: require node 10+
 
-1.2.7: update version info & package lock
-
-1.2.6: streamline dependencies- move lint outside of package/grunt; bump version
-
-1.2.5: exclude renovate.json from published package ; bump version
-
 1.2.4: pin dependencies; integrate renovatebot ; bump version
 
 1.2.3: add `.npmignore` to repo to improve `npm publish` ; bump version
 
 1.2.2: at long last properly make `grunt` a _peerDependency_ ; bump version
 
-1.2.1: drop support for node <= 9.0.0 ; bump version
-
 1.2.0: drop node 6 support; bump version
-
-1.1.2: update dependencies (clears `npm audit` warnings); bump version
 
 1.1.0: drop node 5; enhance eslint rule checks; bump version
 
@@ -191,14 +183,10 @@ allow use of 1.00 and beyond
 
 ## License
 
-Copyright (c) 2012-2021 Tom King.
+Copyright (c) 2012-2022 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
-
-[build-image]: https://travis-ci.com/mobilemind/text2datauri.svg?branch=main
-
-[build-url]: https://travis-ci.com/mobilemind/text2datauri
 
 [npm-image]: https://img.shields.io/npm/v/text2datauri.svg
 
