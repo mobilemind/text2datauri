@@ -3,7 +3,7 @@
 ![repo version](https://img.shields.io/github/package-json/v/mobilemind/text2datauri.svg)
  [![Latest version on npmjs.com][npm-image]][npm-url]
  [![Downloads from npmjs.com][npm-downloads]][npm-url]
- [![Build Status][build-image]][build-url]
+ [![CodeQL](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml)
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
