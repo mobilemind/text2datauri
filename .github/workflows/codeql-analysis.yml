@@ -18,7 +18,8 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ main ]
   schedule:
-    - cron: '17 4 * * 5,6,0'
+  - cron: '17 4 * * 5,6,0'
+  # eslint "yml/no-empty-mapping-value": 0
   workflow_dispatch:
 
 jobs:
@@ -63,7 +64,7 @@ jobs:
     #    and modify them (or add more) to build your code if your project
     #    uses a compiled language
 
-    #- run: |
+    # - run: |
     #   make bootstrap
     #   make release
 
