@@ -18,12 +18,9 @@ parserOptions:
 plugins:
 - json
 - node
-- no-storage
-- security
-- xss
 - yml
 
-extends: [eslint:recommended, plugin:json/recommended, plugin:node/recommended, plugin:security/recommended, plugin:yml/recommended]
+extends: [eslint:recommended, plugin:json/recommended, plugin:node/recommended, plugin:yml/recommended]
 
 # http://eslint.org/docs/rules/
 rules:
@@ -232,16 +229,6 @@ rules:
   node/prefer-global/process: 2
   node/prefer-global/url-search-params: 2
   node/prefer-global/url: 2
-
-  # no-storage https://github.com/Implisit/eslint-plugin-no-storage
-  no-storage/no-browser-storage: 2
-
-  # security
-  # using recommended; https://github.com/nodesecurity/eslint-plugin-security
-
-  # xss https://github.com/Rantanen/eslint-plugin-xss
-  xss/no-location-href-assign: 2
-  xss/no-mixed-html: 0
 
   # yml
   # using recommended https://github.com/ota-meshi/eslint-plugin-yml
