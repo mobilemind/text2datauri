@@ -23,13 +23,13 @@ jobs:
 
       # install plugins globally to avoid changing package-lock.json
       - name: Install ESLint Plugins
-        run: npm install -g eslint-plugin-yml
+        run: npm install -g eslint-plugin-json
 
       # Run Linter against code base
       - name: Lint Code Base
         uses: github/super-linter/slim@v4
         env:
-          ACTIONS_RUNNER_DEBUG: true
+          ACTIONS_RUNNER_DEBUG: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           LOG_LEVEL: NOTICE

@@ -14,9 +14,10 @@ parserOptions:
   sourceType: script
 
 plugins:
+- json
 - node
 
-extends: [eslint:recommended, plugin:node/recommended]
+extends: [eslint:recommended, plugin:json/recommended, plugin:node/recommended]
 
 # http://eslint.org/docs/rules/
 rules:
