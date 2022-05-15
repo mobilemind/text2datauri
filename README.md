@@ -4,6 +4,7 @@
  [![Latest version on npmjs.com][npm-image]][npm-url]
  [![Downloads from npmjs.com][npm-downloads]][npm-url]
  [![CodeQL](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml)
+[![NodeJS with Grunt](https://github.com/mobilemind/text2datauri/actions/workflows/npm-grunt.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/npm-grunt.yml)
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
