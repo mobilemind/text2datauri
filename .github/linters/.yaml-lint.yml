@@ -1,6 +1,6 @@
 ---
 ignore: |
-  .github/workflows/codeql-analysis.yml
+  */.github/workflows/codeql-analysis.yml
 
 yaml-files:
   - '.*.yml'
