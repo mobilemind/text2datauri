@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.6.2:  update CI & docs, republish w/new npm credentials
+
 1.6.1: drop Travis-CI and renovate
 
 1.6.0: drop support for node 12, as 14 becomes node LTS
