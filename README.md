@@ -188,7 +188,7 @@ allow use of 1.00 and beyond
 
 ## License
 
-Copyright (c) 2012-2022 Tom King.
+Copyright (c) 2012-2023 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
