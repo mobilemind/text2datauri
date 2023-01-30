@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.7.0: drop support for node < 16.8; update grunt & README
+
 1.6.5: bump version requirements for grunt peerDependency & node; copyright update
 
 1.6.2: update CI & docs, republish w/new npm credentials
