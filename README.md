@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.8.1: drop support for node < 16.19
+
 1.8.0: drop support for node < 16.14
 
 1.7.2: drop support for node < 16.13
