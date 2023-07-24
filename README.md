@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.9.3: update semver dependencies syntax; add npm-shrinkwrap.json
+
 1.9.0: drop support for node < 18.13
 
 1.8.1: drop support for node < 16.19
