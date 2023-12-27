@@ -37,8 +37,8 @@ module.exports = function(grunt) {
         const uriPrefix = text2datauriHelpers.text2dataPrefix(configOptions);
 
         // loop through files
-        const files = this.files;
-        files.forEach(function(filepair) {
+        const { files } = this;
+        files.forEach((filepair) => {
           const rawStr = grunt.file.read(filepair.src);
           // ascii/utf-8 might be validated or pre-processed here
           // encode rawStr to data value
