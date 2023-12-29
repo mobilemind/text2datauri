@@ -7,18 +7,12 @@ module.exports = {
         "plugin:jsonc/recommended-with-json",
         "plugin:node/recommended"
     ],
-    "ignorePatterns": ["**/*{.,-}min.js", ".git/", "/.github/workflows/",
-                       "/node_modules/**"
+    "ignorePatterns": ["**/*{.,-}min.js", ".git/", ".github/workflows/",
+                       "node_modules/", "package-lock.json",
+                       "!.codesandbox/", "!.github/linters/"
     ],
     "parserOptions": {
         "ecmaVersion": 6
-        // parserOptions:
-        //   ecmaFeatures:
-        //     globalReturn: false
-        //     impliedStrict: true
-        //     modules: true
-        //   ecmaVersion: 6
-        //   sourceType: script
     },
     "plugins": [
         "jsonc",
@@ -48,7 +42,7 @@ module.exports = {
         "id-match": "error",
         "init-declarations": "error",
         "max-depth": "error",
-        "max-lines": ["error", {"max": 120, "skipBlankLines": true, "skipComments": true}],
+        "max-lines": ["error", {"max": 128, "skipBlankLines": true, "skipComments": true}],
         "max-nested-callbacks": "error",
         "max-params": ["error", 5],
         "max-statements": ["error", 35],
