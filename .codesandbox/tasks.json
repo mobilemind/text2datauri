@@ -2,7 +2,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm ci"
+      "command": "npm install"
     }
   ],
   "tasks": {
