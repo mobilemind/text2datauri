@@ -2,7 +2,7 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "npm install && npm audit fix"
+      "command": "npm ci"
     }
   ],
   "tasks": {
