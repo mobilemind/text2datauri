@@ -2,7 +2,7 @@
  * grunt-text2datauri
  * https://github.com/mobilemind/grunt-text2datauri
  *
- * Copyright (c) 2012-2023 Tom King
+ * Copyright (c) 2012-2024 Tom King
  * Licensed under the MIT license.
  */
 "use strict";
