@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.10.0: require node ≥ 20.18.0 (node 20 in maintenance mode), drop support for node 18, bump version, update lockfile
+
 1.9.9: require node >= 18.20.0 (node 18 in maintenance mode), bump version, update lockfile
 
 1.9.8: require node >= 18.19.0, use default grunt-contrib-nodeunit
