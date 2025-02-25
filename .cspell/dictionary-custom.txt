@@ -1,0 +1,5 @@
+Codacy
+datauri
+filepair
+gruntjs
+npmjs
