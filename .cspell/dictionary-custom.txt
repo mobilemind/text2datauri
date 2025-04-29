@@ -3,3 +3,5 @@ datauri
 filepair
 gruntjs
 npmjs
+snyk
+travis
