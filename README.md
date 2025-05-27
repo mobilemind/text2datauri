@@ -144,7 +144,7 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.10.2: no functional changes; update cspell dictionary, strictly enforce node
+1.10.3: no functional changes; update cspell dictionary, strictly enforce node
 & npm requirements with .npmrc, bump version, update lockfile, republish
 
 1.10.1: no functional change; integrate cspell for use with git pre-push hook,
@@ -156,55 +156,23 @@ node 18, bump version, update lockfile
 1.9.9: require node >= 18.20.0 (node 18 in maintenance mode), bump version,
 update lockfile
 
-1.9.8: require node >= 18.19.0, use default grunt-contrib-nodeunit
-
-1.9.6: require node > 18.18.1 (node 18 now in maintenance mode)
-
 1.9.5: require node > 18.15.0
-
-1.9.3: update semver dependencies syntax; add npm-shrinkwrap.json
 
 1.9.0: drop support for node < 18.13
 
-1.8.1: drop support for node < 16.19
-
 1.8.0: drop support for node < 16.14
-
-1.7.2: drop support for node < 16.13
 
 1.7.0: drop support for node < 16.8; update grunt & README
 
-1.6.5: bump version requirements for grunt peerDependency & node; copyright update
-
-1.6.2: update CI & docs, republish w/new npm credentials
-
-1.6.1: drop Travis-CI and renovate
-
 1.6.0: drop support for node 12, as 14 becomes node LTS
-
-1.4.3: update to grunt-contrib-nodeunit 3.0.0, update lockfile
-
-1.4.1: update `grunt` dependencies
 
 1.4.0: drop snyk as it doubled dependencies & increased build time; rely on renovatebot
 
 1.3.0: require node 10+
 
-1.2.4: pin dependencies; integrate renovatebot ; bump version
-
-1.2.3: add `.npmignore` to repo to improve `npm publish` ; bump version
-
-1.2.2: at long last properly make `grunt` a _peerDependency_ ; bump version
-
 1.2.0: drop node 6 support; bump version
 
 1.1.0: drop node 5; enhance eslint rule checks; bump version
-
-1.0.5: bump version to republish with improvements for node 8 + npm 5
-
-1.0.4: switch to eslint and apply best practices feedback from it
-
-1.0.3: updates based on lint and for Code Climate testing/feedback
 
 1.0.2: updated package.json and .travis.tml to use `node` ">5.0.0" and `grunt`
 ">1.0.0"
