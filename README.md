@@ -144,7 +144,7 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 to workflow tests, bump version, update lockfile, republish
+1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 to workflow tests, drop node 23 tests, bump version, update lockfile, republish
 
 1.10.3: no functional changes; update cspell dictionary, strictly enforce node
 & npm requirements with .npmrc, bump version, update lockfile, republish
