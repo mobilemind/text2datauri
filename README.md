@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 to workflow tests, bump version, update lockfile, republish
+
 1.10.3: no functional changes; update cspell dictionary, strictly enforce node
 & npm requirements with .npmrc, bump version, update lockfile, republish
 
@@ -188,7 +190,7 @@ allow use of 1.00 and beyond
 
 ## License
 
-Copyright (c) 2012-2024 Tom King.
+Copyright (c) 2012-2025 Tom King.
 Licensed under the MIT license.
 
 <!-- reference URLs -->
