@@ -40,5 +40,5 @@
     "audit": "npm audit --omit=dev --audit-level=moderate",
     "audit:fix": "npm audit fix --omit=dev"
   },
-  "version": "1.10.4"
+  "version": "1.10.5"
 }
