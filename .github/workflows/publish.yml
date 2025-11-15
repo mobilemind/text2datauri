@@ -75,9 +75,7 @@ jobs:
 
       - name: "Upload SBOM to release"
         if: github.event_name == 'release'
-        uses: softprops/action-gh-release@v2
-        with:
-          files: sbom.json
+        run: gh release upload "${GITHUB_REF#refs/tags/}" sbom.json --clobber
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
