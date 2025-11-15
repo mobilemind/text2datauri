@@ -50,7 +50,7 @@ To ensure the integrity of published packages:
 - **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
 - **Dependency Security:** Daily automated security scans via Dependabot
 - **Token Rotation:** npm publishing token rotated every 90 days
-- **Lockfile Validation:** CI workflows validate package-lock.json integrity before installing dependencies
+- **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)
 
 ### Branch Protection Rules
 
