@@ -4,6 +4,7 @@
 .git/
 .github/
 .gitignore
+.gitattributes
 node_modules/
 npm-debug.log
 tmp/
