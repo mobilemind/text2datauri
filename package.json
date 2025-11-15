@@ -26,13 +26,19 @@
   "peerDependencies": {
     "grunt": ">=1.6.1"
   },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "readmeFilename": "README.md",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mobilemind/text2datauri.git"
   },
   "scripts": {
-    "test": "npx grunt test"
+    "test": "npx grunt test",
+    "audit": "npm audit --omit=dev --audit-level=moderate",
+    "audit:fix": "npm audit fix --omit=dev"
   },
   "version": "1.10.4"
 }
