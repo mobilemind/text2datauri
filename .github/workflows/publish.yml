@@ -1,0 +1,148 @@
+---
+# yamllint disable rule:line-length
+name: "Publish to npm"
+
+# Trigger on GitHub releases for controlled publishing
+'on':
+  release:
+    types: [published]
+  # Allow manual trigger for testing (will do a dry-run)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Perform dry-run (do not actually publish)'
+        required: false
+        default: 'true'
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+
+# Minimal permissions following principle of least privilege
+permissions:
+  contents: write  # Required to upload SBOM as release asset
+  id-token: write  # Required for OIDC/trusted publishing and provenance
+
+jobs:
+  publish:
+    name: "Publish to npm with Provenance"
+    runs-on: ubuntu-latest
+
+    # Only run on main branch to prevent accidental publishes from forks
+    if: github.repository == 'mobilemind/text2datauri' && (github.event_name == 'release' || github.event_name == 'workflow_dispatch')
+
+    steps:
+      - name: "Checkout repository"
+        uses: actions/checkout@v5
+        with:
+          # Fetch full history for potential version checks
+          fetch-depth: 0
+
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v6
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+          # Hybrid approach: token auth + OIDC provenance
+          # - NODE_AUTH_TOKEN (from NPM_TOKEN secret) handles authentication
+          # - id-token: write permission enables provenance attestation
+
+      - name: "Validate package-lock.json"
+        run: |
+          npm install --package-lock-only --ignore-scripts
+          git diff --exit-code package-lock.json || {
+            echo "❌ package-lock.json is out of sync with package.json"
+            echo "Run 'npm install' locally and commit the updated lockfile"
+            exit 1
+          }
+          echo "✓ package-lock.json is valid and in sync"
+
+      - name: "Install dependencies"
+        run: npm ci
+
+      - name: "Run tests"
+        run: npm test
+
+      - name: "Security audit"
+        run: npm audit --omit=dev --audit-level=moderate
+
+      - name: "Verify package contents"
+        run: |
+          npm pack --dry-run
+          echo "✓ Package contents verified"
+
+      - name: "Generate SBOM (Software Bill of Materials)"
+        run: |
+          # Generate SBOM in CycloneDX format (industry standard)
+          npx @cyclonedx/cyclonedx-npm --output-file sbom.json --omit dev
+          echo "✓ SBOM generated: sbom.json"
+
+          # Display summary
+          echo "SBOM Summary:"
+          jq -r '.metadata.component.name + "@" + .metadata.component.version' sbom.json || true
+          echo "Components: $(jq '.components | length' sbom.json || echo 'N/A')"
+
+      - name: "Upload SBOM to release"
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: sbom.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: "Check package.json version matches release tag"
+        if: github.event_name == 'release'
+        run: |
+          PACKAGE_VERSION=$(node -p "require('./package.json').version")
+          RELEASE_TAG=${GITHUB_REF#refs/tags/}
+          echo "Package version: $PACKAGE_VERSION"
+          echo "Release tag: $RELEASE_TAG"
+
+          # Strip 'v' prefix if present in tag
+          RELEASE_VERSION=${RELEASE_TAG#v}
+
+          if [ "$PACKAGE_VERSION" != "$RELEASE_VERSION" ]; then
+            echo "❌ Version mismatch: package.json has $PACKAGE_VERSION but release tag is $RELEASE_TAG"
+            exit 1
+          fi
+          echo "✓ Version matches release tag"
+
+      - name: "Publish to npm (dry-run)"
+        if: github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true'
+        run: |
+          echo "🧪 Dry-run mode - not actually publishing"
+          npm publish --dry-run --provenance --access public
+          echo "✓ Dry-run successful - package would be published"
+
+      - name: "Publish to npm with provenance"
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Hybrid approach: NPM_TOKEN (90-day granular token) for auth + --provenance for attestation
+
+      - name: "Verify publication"
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
+        run: |
+          PACKAGE_VERSION="$(node -p "require('./package.json').version")"
+          echo 'Waiting 30 seconds for npm registry to update...'
+          sleep 30
+
+          echo "Verifying publication of text2datauri@$PACKAGE_VERSION"
+          npm view "text2datauri@$PACKAGE_VERSION" version
+
+          echo '✓ Package successfully published and verified'
+          echo "📦 View at: https://www.npmjs.com/package/text2datauri/v/$PACKAGE_VERSION"
+
+      - name: "Check provenance attestation"
+        if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
+        run: |
+          PACKAGE_VERSION="$(node -p "require('./package.json').version")"
+          echo 'Checking for provenance attestation...'
+          sleep 10  # Give npm time to process attestation
+
+          # Try to fetch provenance info (npm 9.5.0+)
+          npm view "text2datauri@$PACKAGE_VERSION" --json | jq -r '.publishConfig.provenance // "No provenance data yet"' || true
+
+          echo 'ℹ️  Provenance attestation may take a few minutes to appear on npm'
+          echo "📋 Check later at: https://www.npmjs.com/package/text2datauri/v/$PACKAGE_VERSION"
