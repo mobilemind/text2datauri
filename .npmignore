@@ -1,3 +1,4 @@
+.claude/
 .codesandbox/
 .cspell/
 .cspell.jsonc
@@ -5,6 +6,8 @@
 .github/
 .gitignore
 .gitattributes
+.npmrc
+*.tgz
 node_modules/
 npm-debug.log
 tmp/
