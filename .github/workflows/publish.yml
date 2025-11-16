@@ -65,13 +65,52 @@ jobs:
       - name: "Generate SBOM (Software Bill of Materials)"
         run: |
           # Generate SBOM in CycloneDX format (industry standard)
-          npx @cyclonedx/cyclonedx-npm --output-file sbom.json --omit dev
+          npm sbom --sbom-format=cyclonedx --omit=dev > sbom.json
           echo "✓ SBOM generated: sbom.json"
 
           # Display summary
           echo "SBOM Summary:"
           jq -r '.metadata.component.name + "@" + .metadata.component.version' sbom.json || true
           echo "Components: $(jq '.components | length' sbom.json || echo 'N/A')"
+
+      - name: "Generate Release Notes"
+        if: github.event_name == 'release'
+        run: |
+          TAG_VERSION="${GITHUB_REF#refs/tags/}"
+          PREV_TAG=$(git describe --abbrev=0 --tags "${TAG_VERSION}^" 2>/dev/null || echo "")
+
+          {
+            if [ -n "$PREV_TAG" ]; then
+              echo "## What's Changed"
+              echo ""
+              git log --pretty=format:"- %s (%h)" "$PREV_TAG..HEAD"
+            else
+              echo "## Release $TAG_VERSION"
+              echo ""
+              echo "Initial release"
+            fi
+
+            echo ""
+            echo "## Verification"
+            echo ""
+            echo "This release includes:"
+            echo "- Signed commits and tags (verify with \`git verify-tag $TAG_VERSION\`)"
+            echo "- Software Bill of Materials (SBOM) in CycloneDX format"
+            echo "- Security audit results from CI pipeline"
+            echo "- npm provenance attestation"
+            echo ""
+            echo "See the [npm package page](https://www.npmjs.com/package/text2datauri) for verification."
+          } > release-notes.md
+
+          echo "Release notes preview:"
+          cat release-notes.md
+
+      - name: "Update Release Notes"
+        if: github.event_name == 'release'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release edit "${GITHUB_REF#refs/tags/}" --notes-file release-notes.md
 
       - name: "Upload SBOM to release"
         if: github.event_name == 'release'
