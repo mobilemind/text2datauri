@@ -6,7 +6,7 @@ The following versions of text2datauri are currently supported with security upd
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.10.x  | :white_check_mark: |
+| 1.11.x  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
@@ -48,7 +48,8 @@ To ensure the integrity of published packages:
   - SBOM (Software Bill of Materials) attached to each release in CycloneDX format
 - **Signed Commits:** All commits to the main branch must be GPG signed
 - **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
-- **Dependency Security:** Daily automated security scans via Dependabot
+- **Zero Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities
+- **Dependency Monitoring:** Dependabot enabled to monitor for any future dependencies or peerDependency issues
 - **Token Rotation:** npm publishing token rotated every 90 days
 - **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)
 
@@ -66,7 +67,7 @@ The `main` branch is protected with the following rules to prevent supply chain 
   - Require branches to be up to date before merging: ✓
   - Required status checks:
     - `Analyze (javascript)` - CodeQL security analysis
-    - `build (20.x)` - Build and test on Node.js 20.x (minimum supported version)
+    - `build (22.x)` - Build and test on Node.js 22.x (minimum supported version)
     - `Lint Code Base` - Code quality and style checks
 
 - **Require signed commits**

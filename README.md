@@ -4,7 +4,7 @@
  [![Latest version on npmjs.com][npm-image]][npm-url]
  [![Downloads from npmjs.com][npm-downloads]][npm-url]
  [![CodeQL](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/codeql-analysis.yml)
-[![NodeJS with Grunt](https://github.com/mobilemind/text2datauri/actions/workflows/npm-grunt.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/npm-grunt.yml)
+[![CI Tests](https://github.com/mobilemind/text2datauri/actions/workflows/ci.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/ci.yml)
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
@@ -143,6 +143,9 @@ style. Add unit tests for any new or changed functionality. Lint and test the
 code using `eslint` (preferred) or `jshint`.
 
 ## Release History
+
+1.11.0: radically reduce dependencies, drop grunt-contrib-nodeunit, drop
+support for node < 22.12, streamline Gruntfile, update ci and build
 
 1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 to workflow tests, drop node 23 tests, bump version, update lockfile, republish
 
