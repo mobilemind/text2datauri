@@ -1,5 +1,5 @@
 ---
-name: "NodeJS with Grunt"
+name: "CI Tests"
 
 on:
   push:
@@ -17,7 +17,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x, 24.x, 25.x]
+        node-version: [22.x, 24.x, 25.x]
 
     steps:
     - uses: actions/checkout@v5
@@ -33,5 +33,5 @@ jobs:
     - name: "Security Audit"
       run: npm audit --omit=dev --audit-level=moderate
 
-    - name: "Build and Test"
-      run: npx grunt test
+    - name: "Run Tests"
+      run: npm test
