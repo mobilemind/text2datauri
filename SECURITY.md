@@ -45,7 +45,6 @@ To ensure the integrity of published packages:
   - Uses granular access token (90-day expiry, rotated quarterly)
   - Provenance attestation provides cryptographic proof of build origin
   - Published packages can be verified at: `npm view text2datauri@<version> --json`
-  - SBOM (Software Bill of Materials) attached to each release in CycloneDX format
 - **Signed Commits:** All commits to the main branch must be GPG signed
 - **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
 - **Zero Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities

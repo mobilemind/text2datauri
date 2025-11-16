@@ -20,7 +20,7 @@ name: "Publish to npm"
 
 # Minimal permissions following principle of least privilege
 permissions:
-  contents: write  # Required to upload SBOM as release asset
+  contents: write  # Required to update release notes
   id-token: write  # Required for OIDC/trusted publishing and provenance
 
 jobs:
@@ -67,17 +67,6 @@ jobs:
           npm pack --dry-run
           echo "✓ Package contents verified"
 
-      - name: "Generate SBOM (Software Bill of Materials)"
-        run: |
-          # Generate SBOM in CycloneDX format (industry standard)
-          npm sbom --sbom-format=cyclonedx --omit=dev > sbom.json
-          echo "✓ SBOM generated: sbom.json"
-
-          # Display summary
-          echo "SBOM Summary:"
-          jq -r '.metadata.component.name + "@" + .metadata.component.version' sbom.json || true
-          echo "Components: $(jq '.components | length' sbom.json || echo 'N/A')"
-
       - name: "Generate Release Notes"
         if: github.event_name == 'release'
         run: |
@@ -100,7 +89,6 @@ jobs:
             echo ""
             echo "This release includes:"
             echo "- Signed commits and tags (verify with \`git verify-tag $TAG_VERSION\`)"
-            echo "- Software Bill of Materials (SBOM) in CycloneDX format"
             echo "- Security audit results from CI pipeline"
             echo "- npm provenance attestation"
             echo ""
@@ -116,12 +104,6 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release edit "${GITHUB_REF#refs/tags/}" --notes-file release-notes.md
-
-      - name: "Upload SBOM to release"
-        if: github.event_name == 'release'
-        run: gh release upload "${GITHUB_REF#refs/tags/}" sbom.json --clobber
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Check package.json version matches release tag"
         if: github.event_name == 'release'
