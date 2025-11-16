@@ -27,7 +27,7 @@ jobs:
 
       # Install ESLint and plugins for linting (not in package.json since we have zero dependencies)
       - name: Install ESLint Plugins
-        run: npm install --no-save eslint@9.39.1 eslint-plugin-n@17.23.1
+        run: npm install --no-save eslint eslint-plugin-n
 
       # Run Linter against code base
       - name: Super-linter
