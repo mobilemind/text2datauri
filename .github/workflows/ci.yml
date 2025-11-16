@@ -1,7 +1,7 @@
 ---
 name: "CI Tests"
 
-on:
+'on':
   push:
     branches: ['main', 'hotfix']
   pull_request:
@@ -33,8 +33,8 @@ jobs:
         # Any vulnerabilities are in peerDependencies (grunt's js-yaml issue)
         # which are user's responsibility, not ours
         npm audit --omit=dev --audit-level=moderate || {
-          echo "⚠️  Audit found vulnerabilities in peerDependencies (expected: grunt's js-yaml)"
-          echo "    This package has ZERO production dependencies - these are not our issues"
+          echo "⚠️  Vulnerabilities found in peerDependencies (expected: grunt's js-yaml)"
+          echo "    This package has ZERO production dependencies- these are not our issues"
           exit 0
         }
 
