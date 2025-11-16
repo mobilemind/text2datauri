@@ -1,7 +1,7 @@
 ---
 name: "Lint Code Base"
 
-on:
+'on':
   push:
     branches-ignore: [main]
   pull_request:
@@ -25,7 +25,7 @@ jobs:
           # Full git history needed for list of changed files w/in `super-linter`
           fetch-depth: 0
 
-      # Install ESLint and plugins for linting (not in package.json since we have zero dependencies)
+      # Install ESLint & plugin (not in package.json; targeting zero dependencies)
       - name: Install ESLint Plugins
         run: npm install --no-save eslint eslint-plugin-n
 
