@@ -6,7 +6,7 @@ The following versions of text2datauri are currently supported with security upd
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.11.x  | :white_check_mark: |
+| 1.12.x  | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
@@ -24,6 +24,7 @@ The following versions of text2datauri are currently supported with security upd
 ### What to Include
 
 When reporting a vulnerability, please include:
+
 - Description of the vulnerability
 - Steps to reproduce
 - Potential impact
@@ -42,14 +43,15 @@ To ensure the integrity of published packages:
 - **2FA Required:** All package maintainers must enable two-factor authentication on their npm accounts
 - **Publishing:** Packages are published from GitHub Actions with npm provenance attestation for supply chain transparency
   - Automated publishing via GitHub Releases (on: release)
-  - Uses granular access token (90-day expiry, rotated quarterly)
-  - Provenance attestation provides cryptographic proof of build origin
+  - Uses OIDC-based trusted publishing (no long-lived tokens required)
+  - Short-lived, workflow-specific credentials generated per-publish
+  - Provenance attestation automatically generated via trusted publishing
   - Published packages can be verified at: `npm view text2datauri@<version> --json`
 - **Signed Commits:** All commits to the main branch must be GPG signed
 - **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
 - **Zero Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities
 - **Dependency Monitoring:** Dependabot enabled to monitor for any future dependencies or peerDependency issues
-- **Token Rotation:** npm publishing token rotated every 90 days
+- **OIDC Authentication:** npm publishing uses OpenID Connect for authentication, eliminating token management overhead
 - **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)
 
 ### Branch Protection Rules
@@ -57,6 +59,7 @@ To ensure the integrity of published packages:
 The `main` branch is protected with the following rules to prevent supply chain attacks:
 
 #### Required Settings
+
 - **Require pull request reviews before merging**
   - Required approving reviews: 1 (from CODEOWNERS)
   - Dismiss stale pull request approvals when new commits are pushed: ✓
@@ -89,12 +92,14 @@ The `main` branch is protected with the following rules to prevent supply chain 
 - **Allow deletions**: ✗ (disabled)
 
 #### Additional Protections
+
 - **Lock branch**: Consider enabling for release branches
 - **Do not allow bypassing the above settings**: ✓
 
 ### Repository Settings
 
 Additional security settings enabled:
+
 - **Vulnerability alerts**: ✓ Enabled (Dependabot alerts)
 - **Security updates**: ✓ Automated security PRs via Dependabot
 - **Secret scanning**: ✓ Enabled for detecting exposed credentials
