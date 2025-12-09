@@ -11,7 +11,7 @@
   "devDependencies": {},
   "engines": {
     "node": ">=22.12.0",
-    "npm": ">=10.9.0"
+    "npm": ">=11.5.1"
   },
   "homepage": "https://github.com/mobilemind/text2datauri",
   "keywords": [
@@ -37,5 +37,5 @@
     "audit": "npm audit --omit=dev --audit-level=moderate",
     "audit:fix": "npm audit fix --omit=dev"
   },
-  "version": "1.11.0"
+  "version": "1.12.0"
 }
