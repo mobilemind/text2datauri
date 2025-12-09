@@ -48,6 +48,22 @@ jobs:
           # - Provenance attestations are automatically generated
           # - No long-lived tokens required - short-lived per-publish credentials
 
+      - name: "Upgrade npm for OIDC support"
+        run: npm install -g npm@latest
+        # OIDC trusted publishing requires npm 11.5.1+
+        # Node.js 22.x ships with npm 10.x, so we need to upgrade explicitly
+
+      - name: "Verify npm version"
+        run: |
+          echo "npm version: $(npm --version)"
+          # Verify we have npm 11.5.1 or later for OIDC support
+          NPM_VERSION=$(npm --version)
+          if [ "$(echo "$NPM_VERSION" | cut -d. -f1)" -lt 11 ]; then
+            echo "❌ npm version $NPM_VERSION is too old for OIDC (requires 11.5.1+)"
+            exit 1
+          fi
+          echo "✓ npm version $NPM_VERSION supports OIDC trusted publishing"
+
       - name: "Run tests"
         run: npm test
         # No install needed - we have ZERO dependencies
@@ -134,6 +150,8 @@ jobs:
         if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
         run: |
           echo "Publishing with OIDC trusted publishing..."
+          # Unset any default NODE_AUTH_TOKEN that might interfere with OIDC
+          unset NODE_AUTH_TOKEN
           npm publish --access public --verbose
         # OIDC trusted publishing:
         # - Authentication via short-lived JWT token (no NODE_AUTH_TOKEN needed)
