@@ -144,6 +144,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.12.1: refined .npmrc & .npmignore, and reduced published package size
+
 1.12.0: migrate to npm trusted publishing with OIDC authentication, require
 npm >= 11.5.1 for OIDC support; update documentation to reflect OIDC publishing
 
