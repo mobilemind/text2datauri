@@ -6,13 +6,12 @@
 ---
 version: 2
 updates:
-  # npm dependency monitoring - quarterly check (we have zero dependencies)
+  # npm dependency monitoring - monthly check (we have zero dependencies)
   # This is a safety net in case dependencies are accidentally added
-  # Reduced frequency since we intentionally have no dependencies
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "quarterly"
+      interval: "monthly"
       time: "04:08"  # Avoid peak hours
       timezone: "UTC"
     open-pull-requests-limit: 2
