@@ -32,12 +32,12 @@ jobs:
         with:
           node-version: '22.x'
 
-      # Cache npm's cache directory for ESLint installation
+      # Cache node_modules for ESLint installation
       - name: "Cache npm dependencies"
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: npm-${{ runner.os }}-eslint-v1
+          path: node_modules
+          key: npm-${{ runner.os }}-eslint
           restore-keys: |
             npm-${{ runner.os }}-
 
