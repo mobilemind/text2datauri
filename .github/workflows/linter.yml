@@ -32,18 +32,17 @@ jobs:
         with:
           node-version: '22.x'
 
-      # Cache ESLint dependencies
-      - name: "Cache ESLint dependencies"
+      # Cache npm's cache directory for ESLint installation
+      - name: "Cache npm dependencies"
         uses: actions/cache@v4
-        id: eslint-cache
         with:
-          path: |
-            node_modules
-          key: eslint-${{ runner.os }}-eslint-plugin-n
+          path: ~/.npm
+          key: npm-${{ runner.os }}-eslint-v1
+          restore-keys: |
+            npm-${{ runner.os }}-
 
       # Install ESLint & plugin (not in package.json; targeting zero dependencies)
       - name: Install ESLint Plugins
-        if: steps.eslint-cache.outputs.cache-hit != 'true'
         run: npm install --no-save --engine-strict=false eslint eslint-plugin-n
 
       # Run Linter against code base
