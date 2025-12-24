@@ -39,7 +39,7 @@ jobs:
         with:
           path: |
             node_modules
-          key: eslint-${{ runner.os }}-${{ hashFiles('.github/workflows/linter.yml') }}
+          key: eslint-${{ runner.os }}-eslint-plugin-n
 
       # Install ESLint & plugin (not in package.json; targeting zero dependencies)
       - name: Install ESLint Plugins
