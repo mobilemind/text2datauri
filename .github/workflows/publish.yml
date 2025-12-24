@@ -27,6 +27,7 @@ jobs:
   publish:
     name: "Publish to npm with Provenance"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     # Only run on main branch to prevent accidental publishes from forks
     if: github.repository == 'mobilemind/text2datauri' && (github.event_name == 'release' || github.event_name == 'workflow_dispatch')
@@ -48,16 +49,14 @@ jobs:
           # - Provenance attestations are automatically generated
           # - No long-lived tokens required - short-lived per-publish credentials
 
-      - name: "Upgrade npm for OIDC support"
-        run: npm install -g npm@latest
-        # OIDC trusted publishing requires npm 11.5.1+
-        # Node.js 22.x ships with npm 10.x, so we need to upgrade explicitly
-
-      - name: "Verify npm version"
+      - name: "Upgrade npm and verify OIDC support"
         run: |
-          echo "npm version: $(npm --version)"
+          # OIDC trusted publishing requires npm 11.5.1+
+          # Node.js 22.x ships with npm 10.x, so we need to upgrade explicitly
+          npm install -g npm@latest
           # Verify we have npm 11.5.1 or later for OIDC support
           NPM_VERSION=$(npm --version)
+          echo "npm version: $NPM_VERSION"
           if [ "$(echo "$NPM_VERSION" | cut -d. -f1)" -lt 11 ]; then
             echo "❌ npm version $NPM_VERSION is too old for OIDC (requires 11.5.1+)"
             exit 1

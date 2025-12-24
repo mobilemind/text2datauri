@@ -14,7 +14,7 @@ updates:
       interval: "monthly"
       time: "04:08"  # Avoid peak hours
       timezone: "UTC"
-    open-pull-requests-limit: 5
+    open-pull-requests-limit: 2
     labels:
       - "dependencies"
     reviewers:

@@ -16,6 +16,7 @@ jobs:
   build:
     name: "Lint Code Base"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       # Checkout the code base
@@ -24,6 +25,21 @@ jobs:
         with:
           # Full git history needed for list of changed files w/in `super-linter`
           fetch-depth: 0
+
+      # Setup Node.js
+      - name: "Setup Node.js"
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22.x'
+
+      # Cache node_modules for ESLint installation
+      - name: "Cache npm dependencies"
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: npm-${{ runner.os }}-eslint
+          restore-keys: |
+            npm-${{ runner.os }}-
 
       # Install ESLint & plugin (not in package.json; targeting zero dependencies)
       - name: Install ESLint Plugins
