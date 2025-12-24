@@ -21,10 +21,10 @@ jobs:
         node-version: [22.x, 24.x, 25.x]
 
     steps:
-    - uses: actions/checkout@v6
+      - uses: actions/checkout@v6
 
     - name: "Use Node.js ${{ matrix.node-version }}"
-      uses:  actions/setup-node@v6
+      uses: actions/setup-node@v6
       with:
         node-version: ${{ matrix.node-version }}
 
@@ -34,12 +34,12 @@ jobs:
         # Any vulnerabilities are in peerDependencies (grunt's js-yaml issue)
         # which are user's responsibility, not ours
         npm audit --omit=dev --audit-level=moderate || {
-          echo "⚠️  Vulnerabilities found in peerDependencies (expected:  grunt's js-yaml)"
+          echo "⚠️  Vulnerabilities found in peerDependencies (expected: grunt's js-yaml)"
           echo "    This package has ZERO production dependencies- these are not our issues"
           exit 0
         }
 
-    - name:  "Run Tests"
+    - name: "Run Tests"
       run: npm test
 
   # Summary job that requires all matrix jobs to pass
@@ -51,6 +51,6 @@ jobs:
     steps:
       - name: Check build matrix success
         if: needs.build.result != 'success'
-        run:  exit 1
+        run: exit 1
       - name: Success
         run: echo "All CI tests passed!"
