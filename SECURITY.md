@@ -53,6 +53,7 @@ To ensure the integrity of published packages:
 - **Dependency Monitoring:** Dependabot enabled to monitor for any future dependencies or peerDependency issues
 - **OIDC Authentication:** npm publishing uses OpenID Connect for authentication, eliminating token management overhead
 - **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)
+- **Script Protection:** npm lifecycle scripts (preinstall, postinstall, prepare) are disabled via `.npmrc` to prevent supply chain attacks from compromised dependencies
 
 ### Branch Protection Rules
 
