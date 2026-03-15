@@ -80,7 +80,7 @@ describe("text2datauri CLI", () => {
       assert.ok(result.stderr.includes("bytes"));
     } finally {
       fs.unlinkSync(tmpIn);
-      try { fs.unlinkSync(tmpOut); } catch (_e) { /* ignore */ }
+      fs.rmSync(tmpOut, { force: true });
     }
   });
 });
