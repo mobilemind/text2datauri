@@ -8,11 +8,16 @@
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
 A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
-or simple URI encoding. Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
+or simple URI encoding. Works as a standalone CLI, a Node.js API, or a grunt
+plugin.
+
+Suitable to convert an HTML file to a `data:text/html;charset=utf-8;base64,...`
 bookmark URI encoded in _base64_. Or use it to convert a CSV file to a
 `data:text/csv;charset=utf-8,...` URI using basic `encodeURIComponent()`
 encoding. It may also be useful for creating URLs to communicate between web
-apps and iOS apps using URI protocol schemes. For converting a `.js` file to a
+apps and iOS apps using URI protocol schemes.
+
+For converting a `.js` file to a
 `javascript:` URI, please see the [js2uri] grunt plugin.
 
 ## Examples
@@ -40,6 +45,14 @@ might become
 
 ```url
 data:text/csv;charset=utf-8,%22Crosby%2C%20Stills%2C%20Nash%20%26%20Young%22%2C%20%22D%C3%A9j%C3%A0%20Vu%22
+```
+
+## CLI Usage
+
+```sh
+npx text2datauri input.html output.uri
+text2datauri --encoding uri --mime-type text/csv input.csv
+text2datauri --help
 ```
 
 ## Getting Started
@@ -144,6 +157,10 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.13.0: add standalone CLI (`bin/text2datauri.js`), export helpers as `main`,
+mark grunt as optional peerDependency, add npm overrides for minimatch 3.1.5
+to fix ReDoS vulnerabilities
+
 1.12.1: refined .npmrc & .npmignore, and reduced published package size
 
 1.12.0: migrate to npm trusted publishing with OIDC authentication, require
@@ -152,7 +169,8 @@ npm >= 11.5.1 for OIDC support; update documentation to reflect OIDC publishing
 1.11.0: radically reduce dependencies, drop grunt-contrib-nodeunit, drop
 support for node < 22.12, streamline Gruntfile, update ci and build
 
-1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 to workflow tests, drop node 23 tests, bump version, update lockfile, republish
+1.10.4: no functional changes; update engine to node >=20.19.5 add node 25 t
+workflow tests, drop node 23 tests, bump version, update lockfile, republish
 
 1.10.3: no functional changes; update cspell dictionary, strictly enforce node
 & npm requirements with .npmrc, bump version, update lockfile, republish
@@ -176,7 +194,8 @@ update lockfile
 
 1.6.0: drop support for node 12, as 14 becomes node LTS
 
-1.4.0: drop snyk as it doubled dependencies & increased build time; rely on renovatebot
+1.4.0: drop snyk as it doubled dependencies & increased build time; rely on
+renovatebot
 
 1.3.0: require node 10+
 

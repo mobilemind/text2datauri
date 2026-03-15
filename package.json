@@ -4,31 +4,45 @@
     "name": "\"mobilemind\" Tom King",
     "url": "https://mobilemind.net/"
   },
+  "bin" : {
+    "text2datauri" : "bin/text2datauri.js"
+  },
   "bugs": {
     "url": "https://github.com/mobilemind/text2datauri/issues"
   },
-  "description": "A grunt plugin to convert a text file to a file with a data URI in base64 or simple URI encoding.",
+  "description": "Convert a text file to a data URI in base64 or URI encoding. Standalone CLI, Node.js API, and grunt plugin.",
   "devDependencies": {},
   "engines": {
     "node": ">=22.21.1",
     "npm": ">=11.5.1"
   },
-   "files": [
+  "files": [
+    "bin/",
     "tasks/",
-    "tests/",
     "Gruntfile.js",
     "LICENSE-MIT",
     "README.md"
   ],
   "homepage": "https://github.com/mobilemind/text2datauri",
   "keywords": [
-    "gruntplugin"
+    "cli",
+    "data-uri",
+    "gruntplugin",
+    "uri-encode"
   ],
   "license": "MIT",
-  "main": "Gruntfile.js",
+  "main": "tasks/text2datauriHelpers.js",
   "name": "text2datauri",
+  "overrides" : {
+    "minimatch" : "3.1.5"
+  },
   "peerDependencies": {
     "grunt": "1.6.1"
+  },
+  "peerDependenciesMeta" : {
+    "grunt" : {
+      "optional" : true
+    }
   },
   "publishConfig": {
     "access": "public",
@@ -44,5 +58,5 @@
     "audit": "npm audit --omit=dev --audit-level=high",
     "audit:fix": "npm audit fix --omit=dev"
   },
-  "version": "1.12.2"
+  "version": "1.13.0"
 }
