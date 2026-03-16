@@ -47,24 +47,58 @@ might become
 data:text/csv;charset=utf-8,%22Crosby%2C%20Stills%2C%20Nash%20%26%20Young%22%2C%20%22D%C3%A9j%C3%A0%20Vu%22
 ```
 
-## CLI Usage
-
-```sh
-npx text2datauri input.html output.uri
-text2datauri --encoding uri --mime-type text/csv input.csv
-text2datauri --help
-```
-
 ## Getting Started
 
 ### Install
 
-Install this grunt plugin into a project with:
-`npm install text2datauri --save-dev`. The `--save-dev` option adds
-`text2datauri` to the _devDependencies_ section of the project `package.json`
-file.
+```sh
+npm install text2datauri --save-dev
+```
 
-### Edit Gruntfile.js
+### CLI Usage
+
+Convert a file and print to stdout:
+
+```sh
+npx text2datauri input.html
+```
+
+Convert a file and write to an output file:
+
+```sh
+npx text2datauri input.html output.uri
+```
+
+Options:
+
+```text
+--encoding <type>       Encoding type: base64 (default) or uri
+--mime-type <type>      MIME type (default: text/html)
+--protocol <proto>      URI protocol prefix (default: data:)
+--source-charset <cs>   Source file charset (default: utf-8)
+--target-charset <cs>   Target charset in URI (default: utf-8)
+--version               Print version
+--help                  Show help
+```
+
+### Node.js API
+
+```javascript
+const { text2data, text2dataPrefix } = require("text2datauri");
+
+const opts = { encoding: "base64", mimeType: "text/html",
+               protocol: "data:", targetCharset: "utf-8" };
+const prefix = text2dataPrefix(opts);
+// => 'data:text/html;charset=utf-8;base64,'
+
+const data = text2data("<html></html>", "base64");
+// => 'PGh0bWw+PC9odG1sPg=='
+
+const dataURI = prefix + data;
+// => 'data:text/html;charset=utf-8;base64,PGh0bWw+PC9odG1sPg=='
+```
+
+### Grunt Plugin
 
 Add the following to the `grunt.initConfig` section of the project
 `Gruntfile.js` file:
