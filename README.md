@@ -7,7 +7,7 @@
 [![CI Tests](https://github.com/mobilemind/text2datauri/actions/workflows/ci.yml/badge.svg)](https://github.com/mobilemind/text2datauri/actions/workflows/ci.yml)
  [![Codacy Code Quality Rating][Codacy-image]][Codacy-dash]
 
-A grunt plugin to convert a _text_ _file_ to a file with a data URI in base64
+Convert a _text_ _file_ to a file with a data URI in base64
 or simple URI encoding. Works as a standalone CLI, a Node.js API, or a grunt
 plugin.
 
