@@ -2,7 +2,8 @@
 
 ## Supported Versions
 
-The following versions of text2datauri are currently supported with security updates:
+The following versions of text2datauri are currently supported with security
+updates:
 
 | Version | Supported          |
 | ------- | ------------------ |
@@ -17,9 +18,12 @@ The following versions of text2datauri are currently supported with security upd
    - You'll receive credit for the discovery
    - We can work together on a fix before public disclosure
 
-2. **Alternative:** If you cannot use GitHub Security Advisories, create a private issue or email the maintainer directly (see package.json for contact info)
+2. **Alternative:** If you cannot use GitHub Security Advisories, create a
+private issue or email the maintainer directly (see package.json for contact
+info)
 
-**Please do not report security vulnerabilities via public GitHub issues** as this may put users at risk before a fix is available.
+**Please do not report security vulnerabilities via public GitHub issues** as
+this may put users at risk before a fix is available.
 
 ### What to Include
 
@@ -34,30 +38,42 @@ When reporting a vulnerability, please include:
 
 - **Initial Response:** Within 48 hours
 - **Status Update:** Within 7 days
-- **Fix Timeline:** Depends on severity, but typically within 30 days for high/critical issues
+- **Fix Timeline:** Depends on severity, but typically within 30 days for
+  high/critical issues
 
 ## Maintainer Security Practices
 
 To ensure the integrity of published packages:
 
-- **2FA Required:** All package maintainers must enable two-factor authentication on their npm accounts
-- **Publishing:** Packages are published from GitHub Actions with npm provenance attestation for supply chain transparency
+- **2FA Required:** All package maintainers must enable two-factor
+  authentication on their npm accounts
+- **Publishing:** Packages are published from GitHub Actions with npm
+  provenance attestation for supply chain transparency
   - Automated publishing via GitHub Releases (on: release)
   - Uses OIDC-based trusted publishing (no long-lived tokens required)
   - Short-lived, workflow-specific credentials generated per-publish
   - Provenance attestation automatically generated via trusted publishing
-  - Published packages can be verified at: `npm view text2datauri@<version> --json`
+  - Published packages can be verified with:
+    `npm view text2datauri@<version> --json`
 - **Signed Commits:** All commits to the main branch must be GPG signed
-- **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
-- **Zero Production Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities
-- **Dependency Monitoring:** Dependabot enabled to monitor for any future dependencies or peerDependency issues
-- **OIDC Authentication:** npm publishing uses OpenID Connect for authentication, eliminating token management overhead
-- **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)
-- **Script Protection:** npm lifecycle scripts (preinstall, postinstall, prepare) are disabled via `.npmrc` to prevent supply chain attacks from compromised dependencies
+- **Code Review:** All changes require review and approval before merging (via
+  CODEOWNERS)
+- **Zero Production Dependencies:** This package has zero production
+  dependencies, eliminating dependency-based vulnerabilities
+- **Dependency Monitoring:** Dependabot enabled to monitor for any future
+  dependencies or peerDependency issues
+- **OIDC Authentication:** npm publishing uses OpenID Connect for
+  authentication, eliminating token management overhead
+- **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails
+  if corrupted or mismatched)
+- **Script Protection:** npm lifecycle scripts (preinstall, postinstall,
+  prepare) are disabled via `.npmrc` to prevent supply chain attacks from
+  compromised dependencies
 
 ### Branch Protection Rules
 
-The `main` branch is protected with the following rules to prevent supply chain attacks:
+The `main` branch is protected with the following rules to prevent supply
+chain attacks:
 
 #### Required Settings
 
@@ -70,7 +86,8 @@ The `main` branch is protected with the following rules to prevent supply chain 
   - Require branches to be up to date before merging: ✓
   - Required status checks:
     - `Analyze (javascript)` - CodeQL security analysis
-    - `build (22.x)` - Build and test on Node.js 22.x (minimum supported version)
+    - `build (22.x)` - Build and test on Node.js 22.x (minimum supported
+      version)
     - `Lint Code Base` - Code quality and style checks
 
 - **Require signed commits**
