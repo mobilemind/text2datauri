@@ -1,0 +1,7 @@
+{
+    "default": true,
+    "blanks-around-lists": false,
+    "line-length": false,
+    "no-inline-html": false,
+    "no-bare-urls": false
+}

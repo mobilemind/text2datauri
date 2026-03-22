@@ -49,7 +49,7 @@ To ensure the integrity of published packages:
   - Published packages can be verified at: `npm view text2datauri@<version> --json`
 - **Signed Commits:** All commits to the main branch must be GPG signed
 - **Code Review:** All changes require review and approval before merging (via CODEOWNERS)
-- **Zero Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities
+- **Zero Production Dependencies:** This package has zero production dependencies, eliminating dependency-based vulnerabilities
 - **Dependency Monitoring:** Dependabot enabled to monitor for any future dependencies or peerDependency issues
 - **OIDC Authentication:** npm publishing uses OpenID Connect for authentication, eliminating token management overhead
 - **Lockfile Integrity:** npm ci validates package-lock.json integrity (fails if corrupted or mismatched)

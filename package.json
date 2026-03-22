@@ -55,8 +55,16 @@
   },
   "scripts": {
     "test": "node --test test/text2datauri*.js",
+    "lint": "eslint .",
+    "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "audit": "npm audit --omit=dev --audit-level=moderate",
     "audit:fix": "npm audit fix --omit=dev"
+  },
+  "devDependencies": {
+    "@eslint/js": "*",
+    "eslint": "*",
+    "eslint-plugin-n": "*",
+    "markdownlint-cli2": "*"
   },
   "version": "1.13.0"
 }
