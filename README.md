@@ -191,6 +191,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.13.2: pin linters/devops devDependencies for consistency w/ SECURITY.md
+
 1.13.1: update devDependencies for devops (linting); streamline GitHub Actions
 
 1.13.0: add standalone CLI (`bin/text2datauri.js`), export helpers as `main`,
