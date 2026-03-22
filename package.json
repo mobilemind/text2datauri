@@ -11,6 +11,12 @@
     "url": "https://github.com/mobilemind/text2datauri/issues"
   },
   "description": "Convert a text file to a data URI in base64 or URI encoding. Standalone CLI, Node.js API, and grunt plugin.",
+  "devDependencies": {
+    "@eslint/js": "~10.0.1",
+    "eslint": "~10.1.0",
+    "eslint-plugin-n": "~17.24.0",
+    "markdownlint-cli2": "~0.22.0"
+  },
   "engines": {
     "node": ">=22.21.1",
     "npm": ">=11.5.1"
@@ -55,8 +61,10 @@
   },
   "scripts": {
     "test": "node --test test/text2datauri*.js",
+    "lint": "eslint .",
+    "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "audit": "npm audit --omit=dev --audit-level=moderate",
     "audit:fix": "npm audit fix --omit=dev"
   },
-  "version": "1.13.0"
+  "version": "1.13.1"
 }

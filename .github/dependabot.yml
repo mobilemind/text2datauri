@@ -1,20 +1,19 @@
 # See the documentation for Dependabot version updates configuration options:
 # https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
 #
-# Note: This package has ZERO production dependencies (devDependencies: {})
-# npm checks are minimal - only to detect if dependencies are accidentally added
+# Note: This package has ZERO production dependencies
+# devDependencies are linting tools (@eslint/js, eslint, eslint-plugin-n, markdownlint-cli2)
 ---
 version: 2
 updates:
-  # npm dependency monitoring - monthly check (we have zero dependencies)
-  # This is a safety net in case dependencies are accidentally added
+  # npm dependency monitoring - monthly check for devDependency updates
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
       time: "04:08"  # Avoid peak hours
       timezone: "UTC"
-    open-pull-requests-limit: 2
+    open-pull-requests-limit: 5
     labels:
       - "dependencies"
     reviewers:
