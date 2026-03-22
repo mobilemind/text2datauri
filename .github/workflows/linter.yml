@@ -29,18 +29,18 @@ jobs:
         uses: actions/cache@v5
         with:
           path: node_modules
-          key: npm-${{ runner.os }}-lint
+          key: npm-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             npm-${{ runner.os }}-
 
       - name: "Install lint dependencies"
-        run: npm install --no-save --engine-strict=false eslint eslint-plugin-n markdownlint-cli2
+        run: npm ci --engine-strict=false
 
       - name: "ESLint"
-        run: npx eslint .
+        run: npm run lint
 
       - name: "Markdown lint"
-        run: npx markdownlint-cli2 "**/*.md" "#node_modules"
+        run: npm run lint:md
 
       - name: "YAML lint"
         run: pip install --quiet yamllint && yamllint .
