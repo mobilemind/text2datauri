@@ -191,6 +191,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.13.1: update devDependencies for devops (linting); streamline GitHub Actions
+
 1.13.0: add standalone CLI (`bin/text2datauri.js`), export helpers as `main`,
 mark grunt as optional peerDependency, add npm overrides for minimatch 3.1.5
 to fix ReDoS vulnerabilities
