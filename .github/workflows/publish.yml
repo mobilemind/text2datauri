@@ -52,9 +52,7 @@ jobs:
       - name: "Upgrade npm and verify OIDC support"
         run: |
           # OIDC trusted publishing requires npm 11.5.1+
-          # Use corepack to upgrade npm independently of the bundled npm
-          corepack enable
-          corepack prepare npm@11.6.1 --activate
+          npm install -g npm@11.6.1
 
           # Verify we have npm 11.5.1 or later for OIDC support
           NPM_VERSION=$(npm --version)
