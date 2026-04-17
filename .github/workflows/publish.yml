@@ -53,8 +53,7 @@ jobs:
         run: |
           # OIDC trusted publishing requires npm 11.5.1+
           # Node.js 22.x ships with npm 10.x, so we need to upgrade explicitly
-          npm install -g npm@latest --ignore-scripts
-          # npm rebuilds its own internal deps automatically during install
+          npm install -g npm@latest
 
           # Verify we have npm 11.5.1 or later for OIDC support
           NPM_VERSION=$(npm --version)
