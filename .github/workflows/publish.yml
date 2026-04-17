@@ -52,8 +52,9 @@ jobs:
       - name: "Upgrade npm and verify OIDC support"
         run: |
           # OIDC trusted publishing requires npm 11.5.1+
-          # Node.js 22.x ships with npm 10.x, so we need to upgrade explicitly
-          npm install -g npm@latest
+          # Use corepack to upgrade npm independently of the bundled npm
+          corepack enable
+          corepack prepare npm@11.6.1 --activate
 
           # Verify we have npm 11.5.1 or later for OIDC support
           NPM_VERSION=$(npm --version)
