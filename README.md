@@ -191,7 +191,7 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.13.3: remove minmatch override, add smol-toml override; bump version
+1.13.3: remove minimatch override, add smol-toml override; bump version
 
 1.13.2: pin linters/devops devDependencies for consistency w/ SECURITY.md
 
