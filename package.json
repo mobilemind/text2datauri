@@ -15,7 +15,7 @@
     "@eslint/js": "10.0.1",
     "eslint": "10.2.0",
     "eslint-plugin-n": "17.24.0",
-    "markdownlint-cli2": "0.22.0"
+    "markdownlint-cli2": "0.22.1"
   },
   "engines": {
     "node": ">=22.21.1",
@@ -39,11 +39,6 @@
   "license": "MIT",
   "main": "tasks/text2datauriHelpers.js",
   "name": "text2datauri",
-  "overrides" : {
-    "markdownlint-cli2": {
-      "smol-toml": "1.6.1"
-    }
-  },
   "peerDependencies": {
     "grunt": "1.6.1"
   },
