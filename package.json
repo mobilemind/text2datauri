@@ -13,8 +13,8 @@
   "description": "Convert a text file to a data URI in base64 or URI encoding. Standalone CLI, Node.js API, and grunt plugin.",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "eslint": "10.5.0",
-    "eslint-plugin-n": "18.1.0",
+    "eslint": "10.6.0",
+    "eslint-plugin-n": "18.2.1",
     "markdownlint-cli2": "0.22.1"
   },
   "engines": {
