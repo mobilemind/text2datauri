@@ -27,7 +27,7 @@ jobs:
   publish:
     name: "Publish to npm with Provenance"
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
 
     # Only run on main branch to prevent accidental publishes from forks
     if: github.repository == 'mobilemind/text2datauri' && (github.event_name == 'release' || github.event_name == 'workflow_dispatch')
@@ -161,11 +161,20 @@ jobs:
         if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
         run: |
           PACKAGE_VERSION="$(node -p "require('./package.json').version")"
-          echo 'Waiting 30 seconds for npm registry to update...'
-          sleep 30
-
           echo "Verifying publication of text2datauri@$PACKAGE_VERSION"
-          npm view "text2datauri@$PACKAGE_VERSION" version
+
+          # npm publish returns 202 (processing); registry propagation can take
+          # several minutes, so retry rather than sleep a fixed time.
+          i=0
+          until npm view "text2datauri@$PACKAGE_VERSION" version >/dev/null 2>&1; do
+            i=$((i + 1))
+            if [ "$i" -ge 30 ]; then
+              echo "❌ text2datauri@$PACKAGE_VERSION not visible on npm after 30 tries"
+              exit 1
+            fi
+            echo "Not visible on npm yet (try $i/30); retrying in 15 seconds..."
+            sleep 15
+          done
 
           echo '✓ Package successfully published and verified'
           echo "📦 View at: https://www.npmjs.com/package/text2datauri/v/$PACKAGE_VERSION"
