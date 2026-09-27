@@ -191,7 +191,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.13.5: Bump node 22, update lockfile & dependencies, set CI to use node 22/24/26
+1.13.5: peer dependency grunt now `>=1.6.3 <2`; require node >= 22.23.0;
+update devDependencies & lockfile; CI tests node 22/24/26
 
 1.13.4: update dependencies, require node >= 22.22.1
 
