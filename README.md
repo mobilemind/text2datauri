@@ -191,7 +191,9 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
-1.13.3: update dependencies, require node >= 22.22.1
+1.13.5: Bump node 22, update lockfile & dependencies, set CI to use node 22/24/26
+
+1.13.4: update dependencies, require node >= 22.22.1
 
 1.13.3: remove minimatch override, add smol-toml override; bump version
 
