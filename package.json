@@ -41,6 +41,7 @@
   "name": "text2datauri",
   "overrides": {
     "katex": "^0.18.2",
+    "minimatch": "~11.0.5",
     "re2js": "^2.8.7"
   },
   "peerDependencies": {
@@ -67,5 +68,5 @@
     "audit": "npm audit --omit=dev --audit-level=moderate",
     "audit:fix": "npm audit fix --omit=dev"
   },
-  "version": "1.13.5"
+  "version": "1.13.6"
 }

@@ -191,6 +191,8 @@ code using `eslint` (preferred) or `jshint`.
 
 ## Release History
 
+1.13.6: dependency overrides to resolve security issues
+
 1.13.5: peer dependency grunt now `>=1.6.3 <2`; require node >= 22.23.0;
 update devDependencies & lockfile; CI tests node 22/24/26
 
