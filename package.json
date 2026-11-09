@@ -39,6 +39,10 @@
   "license": "MIT",
   "main": "tasks/text2datauriHelpers.js",
   "name": "text2datauri",
+  "overrides": {
+    "katex": "^0.18.2",
+    "re2js": "^2.8.7"
+  },
   "peerDependencies": {
     "grunt": ">=1.6.3 <2."
   },
