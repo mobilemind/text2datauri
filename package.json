@@ -15,7 +15,7 @@
     "@eslint/js": "10.0.1",
     "eslint": "10.14.0",
     "eslint-plugin-n": "18.5.0",
-    "markdownlint-cli2": "0.24.0"
+    "markdownlint-cli2": "0.24.1"
   },
   "engines": {
     "node": ">=22.23.0",
@@ -41,8 +41,7 @@
   "name": "text2datauri",
   "overrides": {
     "katex": "^0.18.2",
-    "minimatch": "~11.0.5",
-    "re2js": "^2.8.7"
+    "minimatch": "~11.0.5"
   },
   "peerDependencies": {
     "grunt": ">=1.6.3 <2."
