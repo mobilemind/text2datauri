@@ -13,7 +13,7 @@
   "description": "Convert a text file to a data URI in base64 or URI encoding. Standalone CLI, Node.js API, and grunt plugin.",
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "eslint": "10.14.0",
+    "eslint": "10.15.0",
     "eslint-plugin-n": "18.5.0",
     "markdownlint-cli2": "0.24.1"
   },
@@ -40,8 +40,7 @@
   "main": "tasks/text2datauriHelpers.js",
   "name": "text2datauri",
   "overrides": {
-    "katex": "^0.18.2",
-    "minimatch": "~11.0.5"
+    "katex": "^0.18.2"
   },
   "peerDependencies": {
     "grunt": ">=1.6.3 <2."
